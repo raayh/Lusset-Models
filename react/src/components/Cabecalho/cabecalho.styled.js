@@ -40,8 +40,12 @@ button{
     color: white;
 }
 
-.texto-botão{
+.texto-botao{
     font: Montserrat 700 .8em;
+}
+
+button{
+    padding-left: 50em;
 }
 
 `

@@ -59,7 +59,10 @@ const Conteudo = styled.div`
     .titulo-conteudo{
         display: flex;
         justify-content: center;
+    }
 
+    .titulo-conteudo:hover{
+        cursor: context-menu;
     }
 
     .perfil{
@@ -73,6 +76,10 @@ const Conteudo = styled.div`
 
     .texto-perfil{
         font-size: .7em;
+    }
+
+    .texto-perfil:hover{
+        cursor: context-menu;
     }
 
      .image{
@@ -134,6 +141,10 @@ const Conteudo = styled.div`
         flex-direction: column;
     }
 
+    .titulo-direita:hover{
+        cursor: context-menu;
+    }
+
     .barra-titulo{
         margin: .5em 0em 1.5em 0em;
 
@@ -145,6 +156,46 @@ const Conteudo = styled.div`
         opacity: 20%;
 
         font-size: .9em;
+    }
+
+    .texto-imagem:hover{
+        cursor: context-menu;
+    }
+
+    .texto{
+        border: none;
+        background-color: white;
+    }
+
+    .texto:hover{
+        color: #1282A2;
+        cursor: pointer;
+    }
+
+    
+    .rota{
+        font-family: 'Montserrat', sans-serif;
+        font-size: .8em; 
+
+        color: white;
+
+        border: none;
+        border-radius: 1em;
+
+        width: 11em;
+        heigth: 1em;
+
+        padding: .5em;
+
+        margin: 3em 0em 0em 5em;
+
+        background-color: #1282A2;
+    }
+
+    .rota:hover{
+        cursor: pointer;
+
+        background-color: #001F54;
     }
 
 

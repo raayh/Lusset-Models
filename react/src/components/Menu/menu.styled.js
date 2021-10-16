@@ -55,6 +55,7 @@ const Container = styled.div`
 
         padding: 25px 22px 20px 65px;
 
+        
         color: black;
 
         font-weight: 500;
@@ -83,6 +84,7 @@ const Container = styled.div`
 
         font-weight: 500;
         font-size: 18px;
+        background-color: white;
     }
 
     .texto-aluno{

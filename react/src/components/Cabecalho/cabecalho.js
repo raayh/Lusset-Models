@@ -11,11 +11,7 @@ export default function Cabecalho(){
                     <div> Voltar e Navegar na Loja </div>
                 </div>
 
-                <button> 
-                    <div className="texto-botão"> 
-                        <b>Sair da conta</b> 
-                    </div>
-                </button>
+                <button className="texto-botao"> <b>Sair da conta</b> </button>
             </div>
 
         </Container>        

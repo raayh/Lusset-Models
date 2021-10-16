@@ -2,6 +2,8 @@ import Menu from '../../components/Menu/menu'
 import Cabecalho from '../../components/Cabecalho/cabecalho'
 import { Container, Conteudo } from './styled';
 
+import { Link } from 'react-router-dom'
+
 // import Api from '../../service/api';
 // const api = new Api();
 
@@ -19,19 +21,19 @@ export default function Cliente(){
                             
                             <div className="conteudo-esquerda">
                                
-                                <div className="titulo-conteudo"> CARRINHO DE COMPRAS </div>
+                                <div className="titulo-conteudo"> <b>INFORMAÇÕES DA SUA CONTA</b> </div>
                                 
                                 <div className="perfil"> 
                                     <div className="image"> <img  src="/assets/images/Boneco.svg" alt=""/> </div>
                                     <div className="texto-perfil"> <b>Rayssa Sacramento</b> </div>
-                                    <div className="texto-perfil"> <b>rayssasac04@gmail.com</b> </div>
+                                    <div className="texto-perfil"> rayssasac04@gmail.com </div>
                                 </div> 
 
                                 <div className="rodape"> 
 
-                                    <div className="texto"> Editar Dados </div>
+                                    <button className="texto"> <b>Editar Dados</b> </button>
                                     <div className="barra-rodape"> </div>
-                                    <div className="texto"> Alterar a Senha </div>
+                                    <button className="texto"> <b>Alterar a Senha</b> </button>
 
                                 </div>  
 
@@ -43,14 +45,15 @@ export default function Cliente(){
                         
 
                         <div className="box-direita"> 
-                        
+
+
                             <div className="barra-direita"> </div>
 
                             <div className="conteudo-direita"> 
                             
                                     <div className="titulo-direita"> 
                                     
-                                        <div className="texto-direita"> Ultimos pedidos </div>
+                                        <div className="texto-direita"> <b>Ultimos pedidos</b> </div>
                                         <div className="barra-titulo"> </div>
 
                                     </div>
@@ -59,7 +62,14 @@ export default function Cliente(){
                                     
                                         <img src="/assets/images/Frame.svg" alt="" />
                                         <div className="texto-imagem"> Você não possui ultimos pedidos </div>
-                                    
+                                        
+
+                                        <Link to={{
+                                            pathname: '/carrinho',
+                                            // state: props.info
+                                        }}>    
+                                        <button className="rota"> <b>Ir para o carrinho</b> </button>
+                                        </Link>
                                     </div>
                             
                             </div>
