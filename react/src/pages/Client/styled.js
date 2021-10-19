@@ -79,7 +79,7 @@ const Conteudo = styled.div`
     }
 
     .texto-perfil:hover{
-        cursor: context-menu;
+        cursor: pointer;
     }
 
      .image{
@@ -141,8 +141,25 @@ const Conteudo = styled.div`
         flex-direction: column;
     }
 
-    .titulo-direita:hover{
-        cursor: context-menu;
+    .titulo-direita button{
+        border: none;
+        
+        background-color: white;
+
+        font-family: 'Montserrat', sans-serif;
+
+        font-size: 1em; 
+
+    }
+
+    .texto-direita:hover{
+        cursor: pointer;
+        
+        color: #1282A2;
+
+        border-radius: 1em;
+
+        padding: .3em;
     }
 
     .barra-titulo{

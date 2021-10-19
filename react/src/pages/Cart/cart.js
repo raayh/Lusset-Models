@@ -1,5 +1,4 @@
-import  {Container} from "../styled"
-import {Conteudo} from "./cart.styled"
+import {Container, Conteudo} from "./cart.styled"
 
 export default function Cart(){
     return(

@@ -52,8 +52,10 @@ export default function Cliente(){
                             <div className="conteudo-direita"> 
                             
                                     <div className="titulo-direita"> 
-                                    
-                                        <div className="texto-direita"> <b>Ultimos pedidos</b> </div>
+                                        
+                                        <Link to={{pathname: '/pedido'}}> 
+                                        <button className="texto-direita"> <b>Ultimos pedidos</b> </button>
+                                        </Link>
                                         <div className="barra-titulo"> </div>
 
                                     </div>
