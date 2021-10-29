@@ -79,26 +79,69 @@ const Conteudo = styled.div`
         flex-direction: row;
 
         padding-right: 5em;
+        align-items: center;
+        
+    }
+
+    .operador{
+        color: #1282A2;
+        font-size: 25px;
+    }
+
+    .numero{
+        border: 1px solid #1282A2;
+
+        padding: .5px 18px;
+        margin: 0px 15px;
     }
 
     .preco-roupa{
 
     }
 
-    .barra1{
+    .barra{
+        display: flex;
+        flex-direction: column;
+    }
 
+    .barra1{
+        margin: 1.5em 0em 1.5em 0em;
+
+        width: 100%;
+        
+        border: .2px solid #C5C8C9;
+
+        border-radius: .4em;
+        
     }
 
     .cont-esquerda{
+        display: flex;
+        flex-direction: row;
 
+        color: #B1B2B3;
+
+        padding-left: .6em;
     }
 
     .cont-esquerda > img{
+        opacity: 36%;
 
+        padding-right: .6em;
     }
 
     .cont-direita{
+        display: flex;
+        flex-direction: row;
 
+        justify-content: flex-end;
+        
+        margin-top: -1.2em;
+    }
+
+    .texto{
+        padding-right: 3em;
+        color: #B1B2B3;
     }
 
     .barra2{

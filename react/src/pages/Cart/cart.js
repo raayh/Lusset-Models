@@ -30,40 +30,42 @@ export default function Cart(){
                         <div className="parte2">
                             
                             <div className="qtd-roupa"> 
-                                <div> - </div>
-                                <div> 1 </div>
-                                <div> + </div>
+                                <div  className="operador"> - </div>
+                                <div className="numero"> 1 </div>
+                                <div className="operador"> + </div>
                             </div>
                             
-                            <div className="preco-roupa"> R$ 119,90  </div>
+                            <div className="preco-roupa"> <b>R$ 119,90</b>  </div>
 
                         </div>
 
                     </div>
 
-                    <div className="barra1"> </div>
+                    
 
-                    <div className=""> 
-
+                    <div className="detalhes"> 
+                        
+                        <div className="barra">  <div className="barra1"> </div> </div>
+                        
                         <div className="cont-esquerda"> 
                             <img src="/assets/images/Seta.svg" alt=""/> 
                             <div> Voltar e Navegar na Loja </div>
                         </div>
 
                         <div className="cont-direita"> 
-                            <div> </div>
-                            <div> </div>
-                            <div> </div>
-                            <div> </div>
-
+                            <div className="texto"> Itens </div> 
+                            <div> <b>R$ 119,90</b> </div>
+                            <div className="texto"> Frete </div> 
+                            <div> -- </div>
+                           
                             <div className="barra2"> </div>
 
-                            <div> </div>
-                            <div> </div>
+                            <div className="texto"> SUBTOTAL </div>
+                            <div> <b>R$ 119,90</b> </div>
                         </div>
 
                     </div>
-
+                
                 </div>
 
                 <div className="box-direita"> 
