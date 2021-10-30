@@ -53,15 +53,24 @@ export default function Cart(){
                         </div>
 
                         <div className="cont-direita"> 
-                            <div className="texto"> Itens </div> 
-                            <div> <b>R$ 119,90</b> </div>
-                            <div className="texto"> Frete </div> 
-                            <div> -- </div>
-                           
-                            <div className="barra2"> </div>
 
-                            <div className="texto"> SUBTOTAL </div>
-                            <div> <b>R$ 119,90</b> </div>
+                            <div className="grupo">
+                                <div className="texto"> Itens </div> 
+                                <div className="valor"> <b>R$ 119,90</b> </div>
+                            </div>
+
+                            <div className="grupo">
+                                <div className="texto"> Frete </div> 
+                                <div className="valor">  -- </div>
+                            </div>
+
+                                <div className="barra2"> </div>
+
+                            <div className="grupo">
+                                <div className="texto"> SUBTOTAL </div>
+                                <div className="valor">  <b>R$ 119,90</b> </div>
+                            </div>
+
                         </div>
 
                     </div>
@@ -69,7 +78,57 @@ export default function Cart(){
                 </div>
 
                 <div className="box-direita"> 
+                    
+                    <div className="simulação">
+                        
+                        <div className="titulo"> </div>
+                        <input> </input>
+                        <button> </button>
 
+                    </div>
+
+                    <div>
+
+                        <div className="titulo"> </div>
+                        
+                        <div className="pagamento">
+
+                           <img> </img>
+                           <div className="texto-pagamento"> </div>                
+
+                        </div>
+                        
+                        <div className="pagamento">
+                            
+                           <img> </img>
+                           <div className="texto-pagamento">  </div>
+
+                        </div>
+
+                        <div className="pagamento">
+
+                            <img> </img>
+                            <div className="texto-pagamento">  </div>
+
+                        </div>
+
+                        <div className="cupom">
+
+                            <img> </img>
+                            <div className="texto-cupom"> </div>
+
+                        </div>
+
+                        <button> </button>
+                        
+                        <div className="security">
+                            
+                            <div className="texto-security"></div>
+                            <img></img>
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
