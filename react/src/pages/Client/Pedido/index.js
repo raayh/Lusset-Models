@@ -1,5 +1,5 @@
 import Menu from '../../../components/Menu/menu'
-import Cabecalho from '../../../components/Cabecalho/cabecalho'
+import Cabecalho from '../../../components/cabecalho'
 
 import { Link } from 'react-router-dom'
 import { Container, Conteudo } from './styled'

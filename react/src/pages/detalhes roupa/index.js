@@ -61,10 +61,10 @@ export default function DetalhesProduto() {
             <input type="text"></input>
             <button>Calcular</button>
           </div>
-          <div>
+          <div className="linha1">
             <img src="/assets/images/linha.jpg" alt="" />
           </div>
-          <div>COMPARTILHE ESTE PRODUTO</div>
+          <div className="compartilhar">COMPARTILHE ESTE PRODUTO</div>
         </div>
       </div>
       <div class="linha-separação">

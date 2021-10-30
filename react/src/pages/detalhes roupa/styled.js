@@ -122,11 +122,6 @@ const Container = styled.div`
     margin: 0em 2em 0em 2em;
   }
 
-  .compartilhe {
-    margin-left: 4.2em;
-    color: #1282a2;
-  }
-
   .cartao-img {
     margin-right: 0.4em;
   }
@@ -166,6 +161,16 @@ const Container = styled.div`
     width: 100%;
     height: 21em;
   }
-`;
+
+  .compartilhar {
+    color: #1282a2;
+    margin-left: 4em;
+  }
+
+  .linha1 {
+    margin-left: 2.5em;
+    color: #1282a2;
+  }
+`
 
 export { Container };
