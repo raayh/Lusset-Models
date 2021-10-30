@@ -99,6 +99,10 @@ const Conteudo = styled.div`
 
     }
 
+    .detalhes{
+
+    }
+
     .barra{
         display: flex;
         flex-direction: column;
@@ -132,16 +136,26 @@ const Conteudo = styled.div`
 
     .cont-direita{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
 
-        justify-content: flex-end;
+        padding-left: 23.5em;
         
         margin-top: -1.2em;
     }
 
+    .grupo{
+        display: flex;
+        flex-direction: row;
+    }
+
     .texto{
-        padding-right: 3em;
+        width: 3em;
+
         color: #B1B2B3;
+    }
+
+    .valor{
+        padding-left: 9em;
     }
 
     .barra2{
