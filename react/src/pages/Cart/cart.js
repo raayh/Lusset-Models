@@ -82,8 +82,8 @@ export default function Cart(){
                     <div className="simulação">
                         
                         <div className="titulo"> </div>
-                        <input> </input>
-                        <button> </button>
+                        <input></input>
+                        <button></button>
 
                     </div>
 
