@@ -79,52 +79,52 @@ export default function Cart(){
 
                 <div className="box-direita"> 
                     
-                    <div className="simulação">
+                    <div className="simulacao">
                         
-                        <div className="titulo"> </div>
-                        <input></input>
-                        <button></button>
+                        <div className="titulo"> SIMULE SEU FRETE E PRAZO </div>
+                        <input type="text" className="informe seu cep" placeholder="Informe seu CEP" /> 
+                        <button> SIMULAR </button>
 
                     </div>
 
-                    <div>
+                    <div className="formas-pagamento">
 
-                        <div className="titulo"> </div>
+                        <div className="titulo"> CONDIÇÕES DE PAGAMENTO </div>
                         
                         <div className="pagamento">
 
-                           <img> </img>
-                           <div className="texto-pagamento"> </div>                
+                            <img src="/assets/images/Group (1).svg" alt="" />
+                            <div className="texto-pagamento"> Pix <br /> <b>R$170,98</b> (5% OFF)</div>                
 
                         </div>
                         
                         <div className="pagamento">
                             
-                           <img> </img>
-                           <div className="texto-pagamento">  </div>
+                           <img src="/assets/images/Group.svg" alt="" />
+                           <div className="texto-pagamento"> Boleto Bancário <br /> <b>R$179,98</b> (5% OFF) </div>
 
                         </div>
 
                         <div className="pagamento">
 
-                            <img> </img>
-                            <div className="texto-pagamento">  </div>
+                            <img src="/assets/images/CARTÃO.svg" alt="" />
+                            <div className="texto-pagamento"> Cartão de crédito <br /> <b>R$179,98</b> <br /> até <b>6x</b> de <b>R$30,00</b> </div>
 
                         </div>
 
                         <div className="cupom">
 
-                            <img> </img>
-                            <div className="texto-cupom"> </div>
+                            <img src="/assets/images/mbrisale_99573 1.svg" alt="" />
+                            <div className="texto-cupom"> <b>Possui cupom de desconto?</b>  <br /> Utilize-o na tela de pagamento.</div>
 
                         </div>
 
-                        <button> </button>
+                        <button> FINALIZAR COMPRA </button>
                         
                         <div className="security">
                             
-                            <div className="texto-security"></div>
-                            <img></img>
+                            <div className="texto-security"> Ambiente 100% seguro </div>
+                            <img src="/assets/images/Vector.svg" alt="" />
 
                         </div>
 
@@ -136,4 +136,4 @@ export default function Cart(){
 
         </Container>
     )
-}
+};

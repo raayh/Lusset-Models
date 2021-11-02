@@ -176,8 +176,8 @@ const Conteudo = styled.div`
         display: flex;
         flex-direction: column;
 
-        width: 16em;
-        height: 27em;
+        width: 24em;
+        height: 47em;
 
         border-radius: .4em;
 
@@ -185,8 +185,126 @@ const Conteudo = styled.div`
         box-shadow: 2px 2px 4px 4px rgba(186, 186, 186, 186);
 
         margin-top: -2em;
+        padding: 1.5em 3em 1.5em 1.5em;
+        
     }
+
+    .simulacao{
+
+    }
+
+    .titulo{
+        margin-bottom: .5em;
+    }
+
+    input{
+        border-radius: .4em;
+        opacity: 36%;
+
+        padding: 1em;
+        margin: .5em 1.5em 0em 0em;
+
+        margin-bottom: -4em;
+    }
+
+    .simulacao > button{
+        padding: 1em;
+
+        border: none;
+        border-radius: .3em;
+
+        background-color: #1282A2;
+        color: white;
+    }
+
+    .formas-pagamento{
+
+    }
+
+    .titulo2{
+        margin-top: 1.4em;
+    }
+
+    .pagamento{
+        display: flex;
+        flex-direction: row;
+
+        margin: 2em 0em 1em 0em;
+    }
+
+    .pagamento > img{
+        height: 38px;
+
+        margin-right: .8em;
+    }
+
+    .texto-pagamento{
+        
+    }
+
+    .cupom{
+        display: flex;
+        flex-direction: row;
+
+        justify-content: center;
+        align-items: center;
+
+        width: 21em;
+        height: 6em;
+
+        margin: 2.5em 0em;
+        padding: 1.5em 1.5em 1em 0em;
+
+        background-color: #F9F9F9;
+    }
+
+    .cupom > img{
+        margin: 0em .8em 0em .4em;
+
+        height: 38px;
+    }
+
+    .texto-cupom{
+        font-size: 14px;
+    }
+
+    .formas-pagamento > button{
+        border: none;
+        border-radius: .3em;
+
+        width: 25em; 
+        height: 4em;
+
+        background-color: #1282A2;
+        color: white;
+
+        padding: 1em 5em;
+    }
+
+    .security{
+        display: flex;
+        flex-direction: row;
+
+        justify-content: center;
+        align-items: center;
+        
+        margin-top: 2.5em;
+    }
+
+    .security > img{
+        height: 35px;
+
+        margin-left: 1em;
+    }
+
+    .texto-security{
+        
+    }
+`
+
+const Carrinho_Vazio = styled.div`
+
 
 `
 
-export { Container, Conteudo }
+export { Container, Conteudo, Carrinho_Vazio }
