@@ -50,8 +50,12 @@ export default function Pedido(){
 
                             <div className="texto"> Pedido <span>em espera</span> </div>
 
+                            <Link to={{
+                                pathname: '/carrinho',
+                                // state: props.info
+                            }}>  
                             <button> Ver no carrinho</button>
-
+                            </Link>
                                
                         </div>
 

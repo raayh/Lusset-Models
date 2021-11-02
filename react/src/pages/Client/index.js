@@ -66,10 +66,7 @@ export default function Cliente(){
                                         <div className="texto-imagem"> Você não possui ultimos pedidos </div>
                                         
 
-                                        <Link to={{
-                                            pathname: '/carrinho',
-                                            // state: props.info
-                                        }}>    
+                                        <Link to={{pathname: '/carrinho'}}>    
                                         <button className="rota"> <b>Ir para o carrinho</b> </button>
                                         </Link>
                                     </div>

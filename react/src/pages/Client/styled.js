@@ -200,7 +200,6 @@ const Conteudo = styled.div`
         border-radius: 1em;
 
         width: 11em;
-        heigth: 1em;
 
         padding: .5em;
 

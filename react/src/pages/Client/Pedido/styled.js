@@ -148,7 +148,7 @@ const Conteudo = styled.div`
         border-radius: 1em;
 
         width: 9em;
-        heigth: 1em;
+        height: 1em;
         
         padding: .5em;
 

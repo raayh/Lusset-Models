@@ -1,28 +1,23 @@
 import {Container} from './styled'
 
+import { Link } from 'react-router-dom'
+
 export default function Cabecalho(){
     return(
         <Container>
             <div class="cabecalho-esquerda"> 
-            
-                <div className="imagem">
-                    <div> <img src="/assets/images/foto.svg" alt=""/> </div>
-                    <div className="absoluto"> 3 </div>
-                </div>
+        
+                <img src="/assets/images/Seta_branca.svg" alt=""  height="23px" /> 
+                <Link to={{pathname: '/Home'}}>  
+                <button > Voltar e Navegar na Loja </button>
+                </Link>
 
-                <div className="texto"> Olá, <b>Bruno de Oliveira</b> </div>
-            
             </div>
 
-            <div className="images"> 
-                
-                <div className="img1"> 
-                    <img src="/assets/images/recarregar.svg" alt="" />
-                </div> 
-
-                <div className="img2"> 
-                    <img src="/assets/images/log-out.svg" alt="" /> 
-                </div> 
+            <div className="texto"> 
+            <Link to={{pathname: '/Login'}}>
+                <button > Sair da Conta</button> 
+            </Link>
             </div>
         
                 
