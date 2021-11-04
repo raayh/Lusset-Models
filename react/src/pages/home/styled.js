@@ -10,6 +10,11 @@ const Container = styled.div`
     height: 14em;
   }
 
+  .carousel-container {
+    width: 100%;
+    height: 21em;
+  }
+
   .prod-lanca,
   .prod-tenis,
   .prod-acessorios {
@@ -80,6 +85,7 @@ const Container = styled.div`
     .texto-loja {
       margin: 1em 2em 0em 2em;
   }
+}
 `;
 
 export { Container };

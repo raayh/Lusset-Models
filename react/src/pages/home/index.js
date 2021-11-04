@@ -1,11 +1,87 @@
 import { Container } from "./styled";
-import Cabecalho from "../../components/Cabecalho/index";
+import Cabecalho from "../../components/cabecalho/index";
 import Rodape from "../../components/rodape/index";
 
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+import { useEffect, useState } from "react";
+import Produto from '../../components/box-home'
+import { CarouselConfig } from "./config";
+
 export default function Home() {
+  const [produtos, setProdutos] = useState([])
+  function  listar(){
+      const r = [
+        {
+          id: 10002,
+          imagem: "/assets/images/tenis preto e verm dc.jpg",
+          titulo: "teclado Gamer",
+          preco: "R$ 1.350,00",
+          desc: "Esse produto é muito legal e você deve comprá-lo porque sua vida será feliz!!!",
+          categoria: "tenis"
+        },
+        {
+          id: 10003,
+          imagem: "/assets/images/tenis preto e verm dc.jpg",
+          titulo: "Teclado Gamer",
+          preco: "R$ 680,00",
+          desc: "Esse produto é muito legal e você deve comprá-lo porque sua vida será feliz!!!",
+          categoria: "tenis" 
+        },
+        {
+          id: 10004,
+          imagem: "/assets/images/tenis preto e verm dc.jpg",
+          titulo: "teclado Gamer",
+          preco: "R$ 12.584,00",
+          desc: "Esse produto é muito legal e você deve comprá-lo porque sua vida será feliz!!!",
+          categoria: "tenis"
+        },
+        {
+          id: 10005,
+          imagem: "/assets/images/tenis preto e verm dc.jpg",
+          titulo: "Poltrona Gamer",
+          preco: "R$ 1.350,00",
+          desc: "Esse produto é muito legal e você deve comprá-lo porque sua vida será feliz!!!",
+          categoria: "tenis"
+        },
+        {
+          id: 10006,
+          imagem: "/assets/images/tenis preto e verm dc.jpg",
+          titulo: "Poltrona Gamer",
+          preco: "R$ 680,00",
+          desc: "Esse produto é muito legal e você deve comprá-lo porque sua vida será feliz!!!",
+          categoria: "bone" 
+        },
+        {
+          id: 10007,
+          imagem: "https://http2.mlstatic.com/D_NQ_NP_755842-MLB47599396706_092021-O.webp",
+          titulo: "Poltrona Gamer",
+          preco: "R$ 12.584,00",
+          desc: "Esse produto é muito legal e você deve comprá-lo porque sua vida será feliz!!!",
+          categoria: "acessorio"
+        },
+        {
+          id: 10008,
+          imagem: "/assets/images/tenis preto e verm dc.jpg",
+          titulo: "Poltrona Gamer",
+          preco: "R$ 1.350,00",
+          desc: "Esse produto é muito legal e você deve comprá-lo porque sua vida será feliz!!!",
+          categoria: "bone"
+        },
+      ]
+
+      setProdutos(r)
+  }
+
+  useEffect(() => {
+   listar();
+  });
+
+
   return (
     <Container>
-      <Cabecalho></Cabecalho>
+      <Cabecalho />
       <div className="imagem">
         <div className="nome">Lusett</div>
         <div className="texto-loja">
@@ -19,128 +95,29 @@ export default function Home() {
       <div className="produtos">
         <div className="lancamentos">Lançamentos</div>
         <div className="prod-lanca">
-          <div className="box">
-            <div className="img-produto">
-              <img src="/assets/images/moletom-preto.jpg" alt="" />{" "}
-            </div>
-            <div className="descricao">
-              Moletom com Capuz Preto Lettering Kace
-            </div>
-            <div className="valor">R$ 289, 90</div>
-            <button className="detalhes">Detalhes</button>
-          </div>
-          <div className="box">
-            <div className="img-produto">
-              <img src="/assets/images/calça jogger.jpg" alt="" />{" "}
-            </div>
-            <div className="descricao">
-              Calça Jogger Verse Minimal Strip Preto
-            </div>
-            <div className="valor">R$ 149, 90</div>
-            <button className="detalhes">Detalhes</button>
-          </div>
-          <div className="box">
-            <div className="img-produto">
-              <img src="/assets/images/calça nylon.jpg" alt="" />{" "}
-            </div>
-            <div className="descricao">
-              Calça Nylon Ipermeável Branca Logo Klace
-            </div>
-            <div className="valor">R$ 249,90</div>
-            <button className="detalhes">Detalhes</button>
-          </div>
-          <div className="box">
-            <div className="img-produto">
-              <img src="/assets/images/calça jeans.jpg" alt="" />{" "}
-            </div>
-            <div className="descricao">
-              Calça Jeans Streetwear Cargo Folgada
-            </div>
-            <div className="valor">R$ 199,90</div>
-            <button className="detalhes">Detalhes</button>
-          </div>
+        {produtos.map(i => 
+          <Produto produto={i} display={i.categoria !== '...'? 'none': 'visible'}/>
+         )}
         </div>
 
         <div className="acessorios">Acessórios</div>
         <div className="prod-acessorios">
-          <div className="box">
-            <div className="img-produto">
-              <img src="/assets/images/touca diamond.jpg" alt="" />{" "}
-            </div>
-            <div className="descricao">
-              Touca Masculina Curta Diamond White Bordada Swag
-            </div>
-            <div className="valor">R$ 79,90</div>
-            <button className="detalhes">Detalhes</button>
-          </div>
-          <div className="box">
-            <div className="img-produto">
-              <img src="/assets/images/boné azul.jpg" alt="" />{" "}
-            </div>
-            <div className="descricao">
-              Boné Aba Reta Five Panel com Bordado Frontal - Azul
-            </div>
-            <div className="valor">R$ 59,90</div>
-            <button className="detalhes">Detalhes</button>
-          </div>
-          <div className="box">
-            <div className="img-produto">
-              <img src="/assets/images/boné preto.jpg" alt="" />{" "}
-            </div>
-            <div className="descricao">
-              Boné New Era Aba Reta Fechado Mlb Ny Yankees Basic - Preto
-            </div>
-            <div className="valor">100,00</div>
-            <button className="detalhes">Detalhes</button>
-          </div>
-          <div className="box">
-            <div className="img-produto">
-              <img src="/assets/images/mascaras.jpg" alt="" />{" "}
-            </div>
-            <div className="descricao">
-              Máscara Chronic StreetWear - Preto e Branco
-            </div>
-            <div className="valor">20,00</div>
-            <button className="detalhes">Detalhes</button>
-          </div>
+          
+         {produtos.map(i => 
+          <Produto produto={i} display={i.categoria !== 'acessorio'? 'none': 'visible'}/>
+         )}
+          
         </div>
         <div className="tenis">Tênis</div>
         <div className="prod-tenis">
-          <div className="box">
-            <div className="img-produto">
-              <img src="/assets/images/tenid five blu.jpg" alt="" />{" "}
-            </div>
-            <div className="descricao">Tênis FiveBlu Dad Sneaker Azul/Rosa</div>
-            <div className="valor">149,99</div>
-            <button className="detalhes">Detalhes</button>
-          </div>
-          <div className="box">
-            <div className="img-produto">
-              <img src="/assets/images/dc shoes branco.jpg" alt="" />{" "}
-            </div>
-            <div className="descricao">Tênis DC Shoes Court Graffik Branco</div>
-            <div className="valor">269,99</div>
-            <button className="detalhes">Detalhes</button>
-          </div>
-          <div className="box">
-            <div className="img-produto">
-              <img src="/assets/images/tenis preto e verm dc.jpg" alt="" />{" "}
-            </div>
-            <div className="descricao"> Tênis DC Skateboard Preto/Vermelho</div>
-            <div className="valor">349,90</div>
-            <button className="detalhes">Detalhes</button>
-          </div>
-          <div className="box">
-            <div className="img-produto">
-              <img src="/assets/images/tenis quik silver.jpg" alt="" />{" "}
-            </div>
-            <div className="descricao">Tênis QuikSilver Style Cinza</div>
-            <div className="valor">149,99</div>
-            <button className="detalhes">Detalhes</button>
-          </div>
+        <Carousel responsive={CarouselConfig} className="carousel-container">
+        {produtos.map(i => 
+          <Produto produto={i} />
+         )}
+         </Carousel>
         </div>
       </div>
-      <Rodape></Rodape>
+      <Rodape />
     </Container>
   );
 }
