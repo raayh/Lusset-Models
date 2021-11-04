@@ -11,6 +11,7 @@ import Home from "../src/pages/home/index";
 import DetalhesProduto from "../src/pages/detalhes roupa/index";
 import PagamentoInfo from "../src/pages/pagamento-info/index";
 import PagamentoFrete from "./pages/pagamento-frete";
+import Marcas from "./pages/marcas/pagina1/index";
 
 export default function Routes() {
     return (
@@ -25,6 +26,7 @@ export default function Routes() {
                 <Route path="/DetalhesProduto" component={DetalhesProduto} />
                 <Route path="/PagamentoInfo" component={PagamentoInfo} />
                 <Route path="/PagamentoFrete" component={PagamentoFrete} />
+                <Route path="/marcas" component={Marcas} />
             </Switch>
         </BrowserRouter>
     )
