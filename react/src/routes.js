@@ -12,6 +12,9 @@ import DetalhesProduto from "../src/pages/detalhes roupa/index";
 import PagamentoInfo from "../src/pages/pagamento-info/index";
 import PagamentoFrete from "./pages/pagamento-frete";
 import Marcas from "./pages/marcas/pagina1/index";
+import Marcas2 from "./pages/marcas/pagina2/index";
+import Calcados from "./pages/marcas/pagina1/index";
+import Calcados2 from "./pages/marcas/pagina2/index";
 
 export default function Routes() {
     return (
@@ -27,6 +30,9 @@ export default function Routes() {
                 <Route path="/PagamentoInfo" component={PagamentoInfo} />
                 <Route path="/PagamentoFrete" component={PagamentoFrete} />
                 <Route path="/marcas" component={Marcas} />
+                <Route path="/marcas2" component={Marcas2} />
+                <Route path="/calcados" component={Calcados} />
+                <Route path="/calcados2" component={Calcados2} />
             </Switch>
         </BrowserRouter>
     )

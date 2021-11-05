@@ -1,28 +1,6 @@
-body {
-    margin: 0px;
-    *box-sizing: border-box;
-}
+import styled from "styled-components";
 
-@font-face {
-    font-family: NotoSerif-Regular;
-    src: url(../assets/fonts/NotoSerif-Regular.ttf);
-}
-@font-face {
-    font-family: NotoSerif-Bold;
-    src: url(../assets/fonts/NotoSerif-Bold.ttf);
-}
-@font-face {
-    font-family: NotoSerif-BoldItalic;
-    src: url(../assets/fonts/NotoSerif-BoldItalic.ttf);
-}
-
-@font-face {
-    font-family: NotoSerif-Italic;
-    src: url(../assets/fonts/NotoSerif-Italic.ttf);
-}
-
-
-.container{
+const Container = styled.div`
     margin: 0px;
 
     display: flex;
@@ -196,6 +174,7 @@ body {
     flex-direction: column;
 }
 
+
 .img{
     border-style: bold;
 }
@@ -287,3 +266,4 @@ select {
 
   color: black;
 }
+`

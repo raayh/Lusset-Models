@@ -1,28 +1,6 @@
-body {
-    margin: 0px;
-    *box-sizing: border-box;
-}
+import styled from "styled-components";
 
-@font-face {
-    font-family: NotoSerif-Regular;
-    src: url(../assets/fonts/NotoSerif-Regular.ttf);
-}
-@font-face {
-    font-family: NotoSerif-Bold;
-    src: url(../assets/fonts/NotoSerif-Bold.ttf);
-}
-@font-face {
-    font-family: NotoSerif-BoldItalic;
-    src: url(../assets/fonts/NotoSerif-BoldItalic.ttf);
-}
-
-@font-face {
-    font-family: NotoSerif-Italic;
-    src: url(../assets/fonts/NotoSerif-Italic.ttf);
-}
-
-
-.container{
+const Container = styled.div`
     margin: 0px;
 
     display: flex;
@@ -30,49 +8,6 @@ body {
 
     background-color: #ffffff; 
     color: white;
-}
-
-.cabecalho{
-    display: flex;
-    flex-direction: column;
-    background-color: #001F54;
-    color: white;
-    
-}
-
-.texto-cabecalho {
-    font-family: NotoSerif-Regular;
-    font-size: 1.5em;
-}
-
-.lusett {
-    font-size: 4em;
-    font-family: NotoSerif-Regular;
-    text-shadow: 0.1em 0.1em 0.05em #1282A2;
-}
-.cima {
-    display: flex;
-    flex-direction: row;
-    margin: 1.2em;
-    justify-content: space-between;
-}
-
-.baixo {
-    display: flex;
-    flex-direction: row;
-    margin: 0.6em 5em 2em 5em;
-    justify-content: space-between;
-}
-
-.cabecalho img {
-    max-width: 2em;
-    width: auto;
-}
-
-.icone-lupa {
-    margin-left: 50px;
-    margin-right: -70px;
-}
 
 .superior{
     padding-top: 10px;
@@ -196,7 +131,6 @@ body {
     flex-direction: column;
 }
 
-
 .img{
     border-style: bold;
 }
@@ -234,42 +168,6 @@ button:hover {
     color: black;
 }
 
-
-
-.roda-pe{
-    display: flex;
-    flex-direction: row;
-
-    background-color: #001F54;
-}
-
-.conteudo-pe{
-    color: #ffff;
-
-    justify-content: space-evenly;
-
-    width: 100%;
-
-    font-size: 1.2em;
-    padding-bottom: 5em;
-
-    display: flex;
-    flex-direction: row;
-
-}
-
-.texto1-P{
-    padding-top: 5em;
-}
-
-.texto2-P{
-    padding-top: 5em;
-}
-
-.texto3-P{
-    padding-top: 5em;
-}
-
 .seleção{
     display: flex;
     flex-direction: row;
@@ -288,3 +186,5 @@ select {
 
   color: black;
 }
+`
+export {Container}
