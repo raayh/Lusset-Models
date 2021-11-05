@@ -7,8 +7,8 @@ export default function Calcados () {
     return (
         <Container>
             <Cabecalho> </Cabecalho>
-            <div class="superior">  Acessorios </div>
-            <div class="linha"> <img src="/TCC-Lusett/assets/images/Line 21.jpg"/> </div>
+            <div class="superior">  Calçados </div>
+            <div class="linha"> <img src="../../assets/images/Line 21.jpg"/> </div>
 
             <div className="conteudo-principal">
                 <div className="lateral-tudo">                           
