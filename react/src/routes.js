@@ -2,6 +2,7 @@
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
 import "./index.css";
+import TelaRotas from './pages/Rotas/index'
 import Acessorios from './pages/Acessorios'
 import Cliente from './pages/Client'
 import Pedido from './pages/Client/Pedido'
@@ -23,7 +24,8 @@ export default function Routes() {
     return (
         <BrowserRouter>
             <Switch> 
-                <Route path="/" exact={true} component={Home} />
+                <Routes path="/" exact={true} component={TelaRotas} /> 
+                <Route path="/home" exact={true} component={Home} />
                 <Route path="/Cliente" exact={true} component={Cliente} />
                 <Route path="/pedido" exact={true} component={Pedido} />
                 <Route path="/carrinho" exact={true} component={Cart} />
