@@ -15,6 +15,8 @@ import Marcas from "./pages/marcas/pagina1/index";
 import Marcas2 from "./pages/marcas/pagina2/index";
 import Calcados from "./pages/marcas/pagina1/index";
 import Calcados2 from "./pages/marcas/pagina2/index";
+import Roupas from "./pages/marcas/pagina1/index";
+import Roupas2 from "./pages/marcas/pagina2/index";
 
 export default function Routes() {
     return (
@@ -33,6 +35,8 @@ export default function Routes() {
                 <Route path="/marcas2" component={Marcas2} />
                 <Route path="/calcados" component={Calcados} />
                 <Route path="/calcados2" component={Calcados2} />
+                <Route path="/roupas" component={Roupas} />
+                <Route path="/roupas2" component={Roupas2} />
             </Switch>
         </BrowserRouter>
     )
