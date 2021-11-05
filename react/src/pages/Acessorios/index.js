@@ -4,11 +4,12 @@ import Rodape from "../../../components/rodape/index";
 import 'react-multi-carousel/lib/styles.css'
 
 export default function Acessorios () {
-    return (
-        <Container>
+    return(
+        <Container> 
             <Cabecalho> </Cabecalho>
-            <div class="superior">  Acessorios </div>
-            <div class="linha"> <img src="../../assets/images/Line 21.jpg"/> </div>
+
+            <div className="superior">  Linhas Fila </div>
+            <div className="linha"> <img src="../../assets/images/Line 21.jpg"/> </div>
 
             <div className="conteudo-principal">
                 <div className="lateral-tudo">                           
@@ -35,12 +36,12 @@ export default function Acessorios () {
 
                 <div className="catalogo">  
                     <div className="seleção">   
-                        <select id={filtro1}> 
+                        <select id="filtro1"> 
                             <option value="filtro-D"> </option>
                             <option value="filtro-D"> Novidades </option>
                             <option value="filtro-D"> Extras </option>
                         </select>
-                        <select id={filtro2}> 
+                        <select id= "filtro2" > 
                             <option value="filtro-D"> </option>
                             <option value="filtro-D"> 24 </option>
                             <option value="filtro-D"> 25 </option>
@@ -142,13 +143,10 @@ export default function Acessorios () {
                         <div className="filtro"> </div>    
                 </div>               
             </div>
-
             <Rodape> </Rodape>
         </Container>
     );
 }
      
-
-            
 
             

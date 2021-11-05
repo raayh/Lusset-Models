@@ -2,6 +2,7 @@
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
 import "./index.css";
+import Acessorios from './pages/Acessorios'
 import Cliente from './pages/Client'
 import Pedido from './pages/Client/Pedido'
 import Cart from './pages/Cart/cart'
@@ -37,6 +38,8 @@ export default function Routes() {
                 <Route path="/calcados2" component={Calcados2} />
                 <Route path="/roupas" component={Roupas} />
                 <Route path="/roupas2" component={Roupas2} />
+                <Route path="/acessorios" component={Acessorios} />
+
             </Switch>
         </BrowserRouter>
     )
