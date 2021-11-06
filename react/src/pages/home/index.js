@@ -1,5 +1,5 @@
 import { Container } from "./styled";
-import Cabecalho from "../../components/cabecalho/index";
+import Cabecalho from "../../components/Cabecalho/index";
 import Rodape from "../../components/rodape/index";
 
 import Carousel from 'react-multi-carousel';

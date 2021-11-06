@@ -27,7 +27,6 @@ const Container = styled.div`
         color: white;
     }
 
-    ` 
+`
 
-
-export default {Container}
+export {Container};

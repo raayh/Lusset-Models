@@ -10,7 +10,7 @@ const Container = styled.div`
     font-family: 'Montserrat', sans-serif;
 ` 
 
-const Carrinho_Vazio = styled.div`
+const CarrinhoVazio = styled.div`
     display: flex;
     flex-direction: row;
 
@@ -128,4 +128,4 @@ img{
 
 `
 
-export { Container ,Carrinho_Vazio}
+export { Container ,CarrinhoVazio}

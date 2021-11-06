@@ -302,9 +302,4 @@ const Conteudo = styled.div`
     }
 `
 
-const Carrinho_Vazio = styled.div`
-
-
-`
-
-export { Container, Conteudo, Carrinho_Vazio }
+export { Container, Conteudo}

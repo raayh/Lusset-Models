@@ -1,7 +1,7 @@
 import { Container } from "./styled";
 import RetanguloPagamento from "../../components/retangulo-pagamento/index";
 
-export default function PagamentoFrete() {
+export default function Pagamento() {
   return (
     <Container>
       <div className="quad1">

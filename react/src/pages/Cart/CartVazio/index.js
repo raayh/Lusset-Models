@@ -1,11 +1,11 @@
-import {Container, Carrinho_Vazio} from "./styled"
+import {Container, CarrinhoVazio} from "./styled"
 
 import { Link } from 'react-router-dom'
 
 export default function CartVazio(){
     return(
         <Container>
-            <Carrinho_Vazio>
+            <CarrinhoVazio>
                 
                 <div className="vazios"> 
                     <div className="box-vazia1"></div>
@@ -41,7 +41,7 @@ export default function CartVazio(){
 
                 
                
-            </Carrinho_Vazio>
+            </CarrinhoVazio>
         </Container>
     )
 }
