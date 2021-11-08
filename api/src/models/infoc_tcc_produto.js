@@ -46,6 +46,10 @@ export default class infoc_tcc_produto extends Model {
       type: DataTypes.STRING(100),
       allowNull: true
     },
+    nm_marca: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
     ds_categoria: {
       type: DataTypes.STRING(100),
       allowNull: true
