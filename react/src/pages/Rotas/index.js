@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom"
-import Container from './styled'
+import {Container} from './styled'
 
 export default function TelaRotas(){
     return(
