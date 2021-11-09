@@ -1,4 +1,4 @@
-import db from './db.js';
+import db from './db.js'
 import express from 'express'
 import cors from 'cors'
 
@@ -17,12 +17,11 @@ app.get('/produtos', async (req, resp) => {
 
 app.post('/produtos', async (req, resp) => { 
     try { 
-            let { nome, categoria, precoDe, precoPor, avaliacao,
-                 descricao, quantidade, imagem} = req.body; 
+            let { nome, genero, disponivel, categoria, precoDe, precoPor, avaliacao,
+                 descricao, cores, tamanhos, quantidade, imagem} = req.body; 
             
             
-     let validacao = await db.infoc_tcc_produto.findOne({where: {vl_avaliacao: avaliacao, vl_preco_de: precoDe, vl_preco_por: precoPor, qtd_estoque: quantidade}});
-     let validacao2 =  await db.infoc_tcc_produto.findOne({where: { nm_produto: nome}});
+     let validacao = await db.infoc_tcc_produto.findAll({where: {nm_produto: nome, vl_avaliacao: avaliacao, vl_preco_de: precoDe, vl_preco_por: precoPor, qtd_produto: quantidade, ds_cores: cores, ds_tamanho: tamanhos, bt_disponivel: disponivel, ds_genero: genero}});
 
      if(nome == '')
             return resp.send({ erro: 'O campo nome é obrigatório!' });
@@ -48,23 +47,29 @@ app.post('/produtos', async (req, resp) => {
     if(descricao == '')
         return resp.send({ erro: 'O campo descricao é obrigatório!' });
 
+    if(cores == '')
+        return resp.send({ erro: 'O campo descricao é obrigatório!' });
+
+    if(tamanhos == '')
+        return resp.send({ erro: 'O campo descricao é obrigatório!' });    
+
+
     if(validacao == NaN)
         return resp.send({ erro: 'Os campos Validação, Preços e de Quantidade devem ser números!'})
-
-    if(validacao2 != null)
-            return resp.send({ erro: 'O produto inserido já existe!'});
 
             let p = await db.infoc_tcc_produto.create({
                 nm_produto: nome,
                 ds_categoria: categoria,
                 vl_preco_de: precoDe,   
                 vl_preco_por: precoPor, 
-                vl_avaliacao: avaliacao,       
+                vl_avaliacao: avaliacao,
+                ds_cores: cores,
+                ds_tamanho: tamanhos,       
                 qtd_produto: quantidade,
                 img_produto: imagem, 
                 ds_produto: descricao, 
-                bt_disponivel: true,
-                dt_inclusao: new Date()
+                bt_disponivel: disponivel,
+                ds_genero: genero
             })    
             
                resp.send(p); 
@@ -77,21 +82,23 @@ app.post('/produtos', async (req, resp) => {
 app.put('/produtos/:id', async (req, resp) => {
  try { 
     let { nome, categoria, precoDe, precoPor, avaliacao,
-        descricao, quantidade, imagem} = req.body; 
+        descricao, cores, tamanhos, quantidade, imagem, genero, disponivel} = req.body; 
 
      let { id } = req.params; 
 
      let p = await db.infoc_tcc_produto.update({ 
-        nm_produto: nome,
+            nm_produto: nome,
             ds_categoria: categoria,
             vl_preco_de: precoDe,   
             vl_preco_por: precoPor, 
-            vl_avaliacao: avaliacao,       
+            vl_avaliacao: avaliacao, 
+            ds_cores: cores,
+            ds_tamanho: tamanhos,      
             qtd_produto: quantidade,
             img_produto: imagem, 
             ds_produto: descricao, 
-            bt_disponivel: true,
-            dt_inclusao: new Date()
+            bt_disponivel: disponivel,
+            ds_genero: genero
 
      },
      { 
