@@ -1,3 +1,5 @@
+
+
 import { Container } from "./styled";
 import Cabecalho from "../../components/cabecalho/index";
 import Rodape from "../../components/rodape/index";
@@ -15,7 +17,7 @@ export default function Home() {
       const r = [
         {
           id: 10002,
-          imagem: "/assets/images/tenis preto e verm dc.jpg",
+          imagem: "https://http2.mlstatic.com/D_NQ_NP_716231-MLB41186477605_032020-W.jpg",
           titulo: "teclado Gamer",
           preco: "R$ 1.350,00",
           desc: "Esse produto é muito legal e você deve comprá-lo porque sua vida será feliz!!!",
@@ -23,7 +25,7 @@ export default function Home() {
         },
         {
           id: 10003,
-          imagem: "/assets/images/tenis preto e verm dc.jpg",
+          imagem: "https://img.lojasrenner.com.br/item/581457294/zoom/1.jpg",
           titulo: "Teclado Gamer",
           preco: "R$ 680,00",
           desc: "Esse produto é muito legal e você deve comprá-lo porque sua vida será feliz!!!",
@@ -31,7 +33,7 @@ export default function Home() {
         },
         {
           id: 10004,
-          imagem: "/assets/images/tenis preto e verm dc.jpg",
+          imagem: "https://static.zattini.com.br/produtos/bone-new-era-aba-reta-fechado-mlb-ny-yankees-basic/06/F83-6107-006/F83-6107-006_zoom2.jpg?ts=1621878144",
           titulo: "teclado Gamer",
           preco: "R$ 12.584,00",
           desc: "Esse produto é muito legal e você deve comprá-lo porque sua vida será feliz!!!",
@@ -47,7 +49,7 @@ export default function Home() {
         },
         {
           id: 10006,
-          imagem: "/assets/images/tenis preto e verm dc.jpg",
+          imagem: "Moletom com Capuz Preto Lettering Kace",
           titulo: "Poltrona Gamer",
           preco: "R$ 680,00",
           desc: "Esse produto é muito legal e você deve comprá-lo porque sua vida será feliz!!!",
@@ -96,7 +98,7 @@ export default function Home() {
         <div className="lancamentos">Lançamentos</div>
         <div className="prod-lanca">
         {produtos.map(i => 
-          <Produto produto={i} display={i.categoria !== '...'? 'none': 'visible'}/>
+          <Produto produto={i} />//display={i.categoria !== '...'? 'none': 'visible'}
          )}
         </div>
 
@@ -104,7 +106,7 @@ export default function Home() {
         <div className="prod-acessorios">
           
          {produtos.map(i => 
-          <Produto produto={i} display={i.categoria !== 'acessorio'? 'none': 'visible'}/>
+          <Produto produto={i} />//display={i.categoria !== 'acessorio'? 'none': 'visible'}
          )}
           
         </div>

@@ -24,8 +24,8 @@ export default function Routes() {
     return (
         <BrowserRouter>
             <Switch> 
-                <Routes path="/" exact={true} component={TelaRotas} /> 
-                <Route path="/home" exact={true} component={Home} />
+                <Route path="/" exact={true} component={Home} />
+                <Routes path="/rotas" exact={true} component={TelaRotas} /> 
                 <Route path="/Cliente" exact={true} component={Cliente} />
                 <Route path="/pedido" exact={true} component={Pedido} />
                 <Route path="/carrinho" exact={true} component={Cart} />
