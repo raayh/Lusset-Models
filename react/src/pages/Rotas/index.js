@@ -4,10 +4,10 @@ import {Container} from './styled'
 export default function TelaRotas(){
     return(
         <Container>
-           <Link to="/login"> <button> LOGIN </button> </Link>  
-           {/* <Link to=""> <button> CADASTRE-SE </button> </Link>   */}
+           <Link to="/Login"> <button> LOGIN </button> </Link>  
+           <Link to="/cadastrar"> <button> CADASTRE-SE </button> </Link>  
            <Link to="/home"> <button> HOME </button> </Link>  
-           {/* <Link to=""> <button> SOBRE </button> </Link>   */}
+           <Link to="Sobre"> <button> SOBRE </button> </Link>  
            <Link to="/roupas"> <button> ROUPAS </button> </Link>  
            <Link to="/roupas2"> <button> ROUPAS(PARTE 2)</button> </Link>  
            <Link to="/acessorios"> <button> ACESSÓRIOS </button> </Link>  

@@ -14,11 +14,28 @@ export default function Cabecalho() {
           </div>
         </div>
         <div className="baixo">
+
+        <Link to={{pathname: '/sobre'}}>  
           <div className="texto-cabecalho">Sobre</div>
+        </Link>
+
+        <Link to={{pathname: '/roupas'}}>  
           <div className="texto-cabecalho">Roupas</div>
+        </Link>
+
+        <Link to={{pathname: '/acessorios'}}>  
           <div className="texto-cabecalho">Acessórios</div>
+        </Link>
+
+        <Link to={{pathname: '/marcas'}}>  
           <div className="texto-cabecalho">Marcas</div>
+        </Link>
+        
+        <Link to={{pathname: '/calcados'}}>  
           <div className="texto-cabecalho"> Calçados</div>
+        </Link>
+
+
           <div className="icone-lupa">
             <img src="/assets/images/lupa.jpg" alt="" />{" "}
           </div>

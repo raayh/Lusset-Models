@@ -19,13 +19,19 @@ import Calcados from "./pages/marcas/pagina1/index";
 import Calcados2 from "./pages/marcas/pagina2/index";
 import Roupas from "./pages/Roupas/pagina1/index";
 import Roupas2 from "./pages/Roupas/pagina2/index";
+import Login from './pages/login/index';
+import Sobre from './pages/Sobre';
+import Cadastrar from './pages/Registrar';
 
 export default function Routes() {
     return (
         <BrowserRouter>
             <Switch> 
                 <Route path="/" exact={true} component={TelaRotas} />
+                <Route path="/login" exact={true} component={Login} />
+                <Routes path="/cadastrar" exact={true} component={Cadastrar} /> 
                 <Routes path="/home" exact={true} component={Home} /> 
+                <Routes path="/sobre" exact={true} component={Sobre} />
                 <Route path="/Cliente" exact={true} component={Cliente} />
                 <Route path="/pedido" exact={true} component={Pedido} />
                 <Route path="/carrinho" exact={true} component={Cart} />

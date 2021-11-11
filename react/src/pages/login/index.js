@@ -6,7 +6,7 @@ import 'react-multi-carousel/lib/styles.css'
 // import Api from '../../../service/api';
 // const api = new Api();
 
-export default function login () {
+export default function Login () {
     return(
     <Container> 
     <Cabecalho> </Cabecalho>   

@@ -6,18 +6,15 @@ import 'react-multi-carousel/lib/styles.css'
 // import Api from '../../../service/api';
 // const api = new Api();
 
-export default function Registrar () {
+export default function Cadastrar(){
     return(
         <Container> 
             <Cabecalho> </Cabecalho>
-     
-     </Container>
-     /*
-            <div className="subtitulo">
-        <h2>Em compras a partir de R$300,00</h2>
-        <h3>FRETE GRÁTIS</h3>
+            
+        <div className="subtitulo">
+          <h2>Em compras a partir de R$300,00</h2>
+          <h3>FRETE GRÁTIS</h3>
       </div>
-    </div>
     <div className="dados">
       <form>
         <h1>Insira seus Dados</h1>
@@ -82,7 +79,7 @@ export default function Registrar () {
 
         <div className="form-group final divide">
           <div className="form-single">
-            <p>Ao criar uma conta você está de acordo com nossa<br>política de privacidade.</p>
+            <p>Ao criar uma conta você está de acordo com nossa<br/>política de privacidade.</p>
           </div>
           <div className="form-single">
             <input type="button" id="finalizar" className="form-input" value="Enviar"/>
@@ -93,7 +90,8 @@ export default function Registrar () {
 
 
     </div>
-*/
+
+     </Container>
            
     );
 }   
