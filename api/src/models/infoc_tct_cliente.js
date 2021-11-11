@@ -35,11 +35,7 @@ export default class infoc_tct_cliente extends Model {
       allowNull: true
     },
     ds_senha: {
-<<<<<<< HEAD
-      type: DataTypes.STRING(16),
-=======
       type: DataTypes.STRING(100),
->>>>>>> 66847bae39143a122851360c75d687d28f81bbb0
       allowNull: true
     },
     ds_genero: {
@@ -61,13 +57,10 @@ export default class infoc_tct_cliente extends Model {
     bt_administrador: {
       type: DataTypes.BOOLEAN,
       allowNull: true
-<<<<<<< HEAD
-=======
     },
     ds_login: {
       type: DataTypes.STRING(20),
       allowNull: true
->>>>>>> 66847bae39143a122851360c75d687d28f81bbb0
     }
   }, {
     sequelize,

@@ -1,12 +1,10 @@
+import { Router } from 'express'
+
 import db from '../db.js'
-import express from 'express'
-import cors from 'cors'
 
-const app = express();
-app.use(cors()); 
-app.use(express.json()); 
+const app = Router();
 
-app.get('/produtos', async (req, resp) => {
+app.get('/', async (req, resp) => {
     try{ 
         let p = await db.infoc_tcc_produto.findAll({ order: [[ 'id_produto', 'desc']] }); 
         resp.send(p); 
@@ -15,7 +13,7 @@ app.get('/produtos', async (req, resp) => {
     }
 })
 
-app.post('/produtos', async (req, resp) => { 
+app.post('/', async (req, resp) => { 
     try { 
             let { nome, genero, disponivel, categoria, precoDe, precoPor, avaliacao,
                  descricao, cores, tamanhos, quantidade, imagem} = req.body; 
@@ -79,7 +77,7 @@ app.post('/produtos', async (req, resp) => {
     }
 })
 
-app.put('/produtos/:id', async (req, resp) => {
+app.put('/:id', async (req, resp) => {
  try { 
     let { nome, categoria, precoDe, precoPor, avaliacao,
         descricao, cores, tamanhos, quantidade, imagem, genero, disponivel} = req.body; 
@@ -112,7 +110,7 @@ app.put('/produtos/:id', async (req, resp) => {
  }
 })
 
-app.delete('/produtos/:id', async (req, resp) => { 
+app.delete('/:id', async (req, resp) => { 
     try { 
         let {id} = req.params;
 
@@ -124,5 +122,4 @@ app.delete('/produtos/:id', async (req, resp) => {
     }
 })
 
-app.listen(process.env.PORT,
-           x => console.log(`Server up at port ${process.env.PORT}`))
+export default app;

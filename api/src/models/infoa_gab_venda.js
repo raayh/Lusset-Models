@@ -31,11 +31,7 @@ export default class infoa_gab_venda extends Model {
       allowNull: false
     },
     ds_pagamento: {
-<<<<<<< HEAD
-      type: DataTypes.STRING(255),
-=======
       type: DataTypes.STRING(8000),
->>>>>>> 66847bae39143a122851360c75d687d28f81bbb0
       allowNull: false
     },
     vl_total: {
