@@ -1,10 +1,10 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_post extends Model {
+export default class infoa_gab_endereco extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_post: {
+    id_endereco: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -12,39 +12,35 @@ export default class infod_tif_post extends Model {
     },
     id_usuario: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'infoa_gab_usuario',
+        key: 'id_usuario'
+      }
     },
-    id_comunidade: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    id_comentario_post: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    ds_titulo: {
+    nm_bairro: {
       type: DataTypes.STRING(255),
       allowNull: false
     },
-    ds_descricao: {
+    nm_rua: {
       type: DataTypes.STRING(255),
       allowNull: false
     },
-    ds_imagem: {
-      type: DataTypes.STRING(255),
-      allowNull: false
-    },
-    dt_data_postagem: {
-      type: DataTypes.DATE,
-      allowNull: false
-    },
-    id_like: {
+    nr_numero_rua: {
       type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    ds_cep: {
+      type: DataTypes.STRING(255),
+      allowNull: false
+    },
+    ds_complemento: {
+      type: DataTypes.STRING(255),
       allowNull: false
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_post',
+    tableName: 'infoa_gab_endereco',
     timestamps: false,
     indexes: [
       {
@@ -52,7 +48,7 @@ export default class infod_tif_post extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_post" },
+          { name: "id_endereco" },
         ]
       },
       {
@@ -62,22 +58,8 @@ export default class infod_tif_post extends Model {
           { name: "id_usuario" },
         ]
       },
-      {
-        name: "id_comunidade",
-        using: "BTREE",
-        fields: [
-          { name: "id_comunidade" },
-        ]
-      },
-      {
-        name: "id_comentario_post",
-        using: "BTREE",
-        fields: [
-          { name: "id_comentario_post" },
-        ]
-      },
     ]
   });
-  return infod_tif_post;
+  return infoa_gab_endereco;
   }
 }

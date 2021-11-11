@@ -1,34 +1,46 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_comentario extends Model {
+export default class infoa_gab_usuario extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_comentario: {
+    id_usuario: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_usuario: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    id_anime: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    ds_comentario: {
+    nm_usuario: {
       type: DataTypes.STRING(255),
       allowNull: false
     },
-    dt_comentario: {
-      type: DataTypes.DATE,
+    ds_cpf: {
+      type: DataTypes.STRING(255),
+      allowNull: false
+    },
+    ds_email: {
+      type: DataTypes.STRING(255),
+      allowNull: false
+    },
+    ds_senha: {
+      type: DataTypes.STRING(255),
+      allowNull: false
+    },
+    bt_gerente: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false
+    },
+    ds_codigo: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
+    img_usuario: {
+      type: DataTypes.STRING(255),
       allowNull: false
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_comentario',
+    tableName: 'infoa_gab_usuario',
     timestamps: false,
     indexes: [
       {
@@ -36,25 +48,11 @@ export default class infod_tif_comentario extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_comentario" },
-        ]
-      },
-      {
-        name: "id_usuario",
-        using: "BTREE",
-        fields: [
           { name: "id_usuario" },
-        ]
-      },
-      {
-        name: "id_anime",
-        using: "BTREE",
-        fields: [
-          { name: "id_anime" },
         ]
       },
     ]
   });
-  return infod_tif_comentario;
+  return infoa_gab_usuario;
   }
 }

@@ -1,34 +1,30 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_ssc_item extends Model {
+export default class infoc_nws_tb_calendario extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_item: {
+    id_calendario: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_produto: {
+    id_evento: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infod_ssc_produto',
-        key: 'id_produto'
+        model: 'infoc_nws_tb_evento',
+        key: 'id_evento'
       }
     },
-    qtd_produto: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    vl_item: {
-      type: DataTypes.DECIMAL(10,2),
+    dt_evento: {
+      type: DataTypes.DATE,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_ssc_item',
+    tableName: 'infoc_nws_tb_calendario',
     timestamps: false,
     indexes: [
       {
@@ -36,18 +32,18 @@ export default class infod_ssc_item extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_item" },
+          { name: "id_calendario" },
         ]
       },
       {
-        name: "id_produto",
+        name: "id_evento",
         using: "BTREE",
         fields: [
-          { name: "id_produto" },
+          { name: "id_evento" },
         ]
       },
     ]
   });
-  return infod_ssc_item;
+  return infoc_nws_tb_calendario;
   }
 }

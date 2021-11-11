@@ -1,34 +1,42 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_comentario extends Model {
+export default class infoa_gab_venda_item extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_comentario: {
+    id_venda_item: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_usuario: {
+    id_produto: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'infoa_gab_produto',
+        key: 'id_produto'
+      }
+    },
+    id_venda: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'infoa_gab_venda',
+        key: 'id_venda'
+      }
+    },
+    qtd_produtos: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    id_anime: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    ds_comentario: {
-      type: DataTypes.STRING(255),
-      allowNull: false
-    },
-    dt_comentario: {
-      type: DataTypes.DATE,
+    vl_preco: {
+      type: DataTypes.DECIMAL(15,2),
       allowNull: false
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_comentario',
+    tableName: 'infoa_gab_venda_item',
     timestamps: false,
     indexes: [
       {
@@ -36,25 +44,25 @@ export default class infod_tif_comentario extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_comentario" },
+          { name: "id_venda_item" },
         ]
       },
       {
-        name: "id_usuario",
+        name: "id_produto",
         using: "BTREE",
         fields: [
-          { name: "id_usuario" },
+          { name: "id_produto" },
         ]
       },
       {
-        name: "id_anime",
+        name: "id_venda",
         using: "BTREE",
         fields: [
-          { name: "id_anime" },
+          { name: "id_venda" },
         ]
       },
     ]
   });
-  return infod_tif_comentario;
+  return infoa_gab_venda_item;
   }
 }

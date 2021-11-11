@@ -1,7 +1,7 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_ssc_pedido extends Model {
+export default class infoa_enl_pedido extends Model {
   static init(sequelize, DataTypes) {
   super.init({
     id_pedido: {
@@ -10,45 +10,33 @@ export default class infod_ssc_pedido extends Model {
       allowNull: false,
       primaryKey: true
     },
-    id_venda: {
+    id_usuario_comprador: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
       references: {
-        model: 'infod_ssc_venda',
-        key: 'id_venda'
+        model: 'infoa_enl_usuario',
+        key: 'id_usuario'
       }
     },
-    id_item: {
+    id_usuario_vendedor: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
       references: {
-        model: 'infod_ssc_item',
-        key: 'id_item'
+        model: 'infoa_enl_usuario',
+        key: 'id_usuario'
       }
     },
     dt_pedido: {
       type: DataTypes.DATE,
-      allowNull: true
+      allowNull: false
     },
-    ds_entregue: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true
-    },
-    ds_acaminho: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true
-    },
-    ds_preparando: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true
-    },
-    vl_pedido: {
-      type: DataTypes.DECIMAL(10,2),
-      allowNull: true
+    vl_total_pedido: {
+      type: DataTypes.DECIMAL(6,2),
+      allowNull: false
     }
   }, {
     sequelize,
-    tableName: 'infod_ssc_pedido',
+    tableName: 'infoa_enl_pedido',
     timestamps: false,
     indexes: [
       {
@@ -60,21 +48,21 @@ export default class infod_ssc_pedido extends Model {
         ]
       },
       {
-        name: "id_item",
+        name: "id_usuario_comprador",
         using: "BTREE",
         fields: [
-          { name: "id_item" },
+          { name: "id_usuario_comprador" },
         ]
       },
       {
-        name: "id_venda",
+        name: "id_usuario_vendedor",
         using: "BTREE",
         fields: [
-          { name: "id_venda" },
+          { name: "id_usuario_vendedor" },
         ]
       },
     ]
   });
-  return infod_ssc_pedido;
+  return infoa_enl_pedido;
   }
 }

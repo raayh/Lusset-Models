@@ -1,30 +1,34 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_ssc_adm extends Model {
+export default class infoc_ntc_local extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_adm: {
+    id_local: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    ds_email: {
+    ds_latitude: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_senha: {
-      type: DataTypes.STRING(50),
+    ds_longitude: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_codigo_adm: {
-      type: DataTypes.STRING(15),
+    ds_bairro: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    ds_cidade: {
+      type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_ssc_adm',
+    tableName: 'infoc_ntc_local',
     timestamps: false,
     indexes: [
       {
@@ -32,11 +36,11 @@ export default class infod_ssc_adm extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_adm" },
+          { name: "id_local" },
         ]
       },
     ]
   });
-  return infod_ssc_adm;
+  return infoc_ntc_local;
   }
 }

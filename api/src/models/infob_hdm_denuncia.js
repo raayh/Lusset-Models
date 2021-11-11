@@ -1,46 +1,42 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_ssc_produto extends Model {
+export default class infob_hdm_denuncia extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_produto: {
+    id_HDM_denuncia: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_produto: {
-      type: DataTypes.STRING(50),
+    bt_HDM_caracteristicas: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     },
-    nm_categoria: {
+    ds_HDM_caracteristicas: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_produto: {
-      type: DataTypes.STRING(500),
+    bt_HDM_chat_denucnias: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     },
-    ds_avaliacao: {
-      type: DataTypes.DECIMAL(10,0),
+    nm_HDM_chat_denuncias: {
+      type: DataTypes.STRING(200),
       allowNull: true
     },
-    qtd_disponivel_estoque: {
-      type: DataTypes.INTEGER,
+    bt_HDM_localizacao: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     },
-    ds_imagem: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
-    vl_produto: {
-      type: DataTypes.DECIMAL(10,2),
+    dt_HDM_localizacao: {
+      type: DataTypes.DATEONLY,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_ssc_produto',
+    tableName: 'infob_hdm_denuncia',
     timestamps: false,
     indexes: [
       {
@@ -48,11 +44,11 @@ export default class infod_ssc_produto extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_produto" },
+          { name: "id_HDM_denuncia" },
         ]
       },
     ]
   });
-  return infod_ssc_produto;
+  return infob_hdm_denuncia;
   }
 }

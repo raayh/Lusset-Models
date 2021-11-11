@@ -1,34 +1,34 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_comentario extends Model {
+export default class infoc_atn_tb_chat extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_comentario: {
+    id_chat: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_usuario: {
+    id_sala: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
-    id_anime: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    ds_comentario: {
+    ds_mensagem: {
       type: DataTypes.STRING(255),
-      allowNull: false
+      allowNull: true
     },
-    dt_comentario: {
+    dt_mensagem: {
       type: DataTypes.DATE,
-      allowNull: false
+      allowNull: true
+    },
+    tp_enviado_por: {
+      type: DataTypes.STRING(100),
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_comentario',
+    tableName: 'infoc_atn_tb_chat',
     timestamps: false,
     indexes: [
       {
@@ -36,25 +36,18 @@ export default class infod_tif_comentario extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_comentario" },
+          { name: "id_chat" },
         ]
       },
       {
-        name: "id_usuario",
+        name: "id_sala",
         using: "BTREE",
         fields: [
-          { name: "id_usuario" },
-        ]
-      },
-      {
-        name: "id_anime",
-        using: "BTREE",
-        fields: [
-          { name: "id_anime" },
+          { name: "id_sala" },
         ]
       },
     ]
   });
-  return infod_tif_comentario;
+  return infoc_atn_tb_chat;
   }
 }

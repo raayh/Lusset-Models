@@ -1,34 +1,34 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_comentario extends Model {
+export default class infoc_atn_tb_sala extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_comentario: {
+    id_sala: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_usuario: {
+    nm_sala: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    bt_ativa: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true
+    },
+    id_empresa: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
-    id_anime: {
+    id_pessoal: {
       type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    ds_comentario: {
-      type: DataTypes.STRING(255),
-      allowNull: false
-    },
-    dt_comentario: {
-      type: DataTypes.DATE,
-      allowNull: false
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_comentario',
+    tableName: 'infoc_atn_tb_sala',
     timestamps: false,
     indexes: [
       {
@@ -36,25 +36,25 @@ export default class infod_tif_comentario extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_comentario" },
+          { name: "id_sala" },
         ]
       },
       {
-        name: "id_usuario",
+        name: "id_empresa",
         using: "BTREE",
         fields: [
-          { name: "id_usuario" },
+          { name: "id_empresa" },
         ]
       },
       {
-        name: "id_anime",
+        name: "id_pessoal",
         using: "BTREE",
         fields: [
-          { name: "id_anime" },
+          { name: "id_pessoal" },
         ]
       },
     ]
   });
-  return infod_tif_comentario;
+  return infoc_atn_tb_sala;
   }
 }

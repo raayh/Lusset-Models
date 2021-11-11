@@ -1,7 +1,7 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_usuario extends Model {
+export default class infoc_ntc_usuario extends Model {
   static init(sequelize, DataTypes) {
   super.init({
     id_usuario: {
@@ -11,36 +11,32 @@ export default class infod_tif_usuario extends Model {
       primaryKey: true
     },
     nm_usuario: {
-      type: DataTypes.STRING(19),
-      allowNull: false
+      type: DataTypes.STRING(255),
+      allowNull: true
     },
     ds_email: {
       type: DataTypes.STRING(255),
-      allowNull: false
+      allowNull: true
     },
     ds_senha: {
-      type: DataTypes.STRING(10),
-      allowNull: false
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    ds_cpf: {
+      type: DataTypes.STRING(255),
+      allowNull: true
     },
     ds_telefone: {
-      type: DataTypes.STRING(19),
-      allowNull: false
-    },
-    dt_criacao: {
-      type: DataTypes.DATE,
-      allowNull: false
-    },
-    bt_online: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false
-    },
-    ds_perfil: {
       type: DataTypes.STRING(255),
-      allowNull: false
+      allowNull: true
+    },
+    ds_senha_rec: {
+      type: DataTypes.STRING(100),
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_usuario',
+    tableName: 'infoc_ntc_usuario',
     timestamps: false,
     indexes: [
       {
@@ -53,6 +49,6 @@ export default class infod_tif_usuario extends Model {
       },
     ]
   });
-  return infod_tif_usuario;
+  return infoc_ntc_usuario;
   }
 }

@@ -1,34 +1,38 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_ssc_item extends Model {
+export default class infoc_nws_tb_cartao extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_item: {
+    id_cartao: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_produto: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'infod_ssc_produto',
-        key: 'id_produto'
-      }
+    nr_cartao: {
+      type: DataTypes.STRING(255),
+      allowNull: true
     },
-    qtd_produto: {
+    ds_cvc: {
       type: DataTypes.INTEGER,
       allowNull: true
     },
-    vl_item: {
-      type: DataTypes.DECIMAL(10,2),
+    dt_vencimento: {
+      type: DataTypes.DATEONLY,
+      allowNull: true
+    },
+    ds_cpf: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    nm_titular: {
+      type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_ssc_item',
+    tableName: 'infoc_nws_tb_cartao',
     timestamps: false,
     indexes: [
       {
@@ -36,18 +40,11 @@ export default class infod_ssc_item extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_item" },
-        ]
-      },
-      {
-        name: "id_produto",
-        using: "BTREE",
-        fields: [
-          { name: "id_produto" },
+          { name: "id_cartao" },
         ]
       },
     ]
   });
-  return infod_ssc_item;
+  return infoc_nws_tb_cartao;
   }
 }

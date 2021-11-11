@@ -1,34 +1,30 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_ssc_item extends Model {
+export default class infob_mw_atores extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_item: {
+    id_ator: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_produto: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'infod_ssc_produto',
-        key: 'id_produto'
-      }
-    },
-    qtd_produto: {
+    id_filme: {
       type: DataTypes.INTEGER,
       allowNull: true
     },
-    vl_item: {
-      type: DataTypes.DECIMAL(10,2),
+    nm_ator: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    ds_princ_atores: {
+      type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_ssc_item',
+    tableName: 'infob_mw_atores',
     timestamps: false,
     indexes: [
       {
@@ -36,18 +32,18 @@ export default class infod_ssc_item extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_item" },
+          { name: "id_ator" },
         ]
       },
       {
-        name: "id_produto",
+        name: "id_filme",
         using: "BTREE",
         fields: [
-          { name: "id_produto" },
+          { name: "id_filme" },
         ]
       },
     ]
   });
-  return infod_ssc_item;
+  return infob_mw_atores;
   }
 }

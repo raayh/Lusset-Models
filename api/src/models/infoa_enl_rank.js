@@ -1,34 +1,34 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_comentario extends Model {
+export default class infoa_enl_rank extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_comentario: {
+    id_rank: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_usuario: {
+    id_produto: {
       type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'infoa_enl_produto',
+        key: 'id_produto'
+      }
+    },
+    qtd_clique: {
+      type: DataTypes.DECIMAL(6,2),
       allowNull: false
     },
-    id_anime: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    ds_comentario: {
-      type: DataTypes.STRING(255),
-      allowNull: false
-    },
-    dt_comentario: {
+    dt_clique: {
       type: DataTypes.DATE,
       allowNull: false
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_comentario',
+    tableName: 'infoa_enl_rank',
     timestamps: false,
     indexes: [
       {
@@ -36,25 +36,18 @@ export default class infod_tif_comentario extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_comentario" },
+          { name: "id_rank" },
         ]
       },
       {
-        name: "id_usuario",
+        name: "id_produto",
         using: "BTREE",
         fields: [
-          { name: "id_usuario" },
-        ]
-      },
-      {
-        name: "id_anime",
-        using: "BTREE",
-        fields: [
-          { name: "id_anime" },
+          { name: "id_produto" },
         ]
       },
     ]
   });
-  return infod_tif_comentario;
+  return infoa_enl_rank;
   }
 }

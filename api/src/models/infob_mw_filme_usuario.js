@@ -1,34 +1,30 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_comentario extends Model {
+export default class infob_mw_filme_usuario extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_comentario: {
+    id_filme_usu: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
+    id_filme: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
     id_usuario: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
-    id_anime: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    ds_comentario: {
+    nm_categoria: {
       type: DataTypes.STRING(255),
-      allowNull: false
-    },
-    dt_comentario: {
-      type: DataTypes.DATE,
-      allowNull: false
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_comentario',
+    tableName: 'infob_mw_filme_usuario',
     timestamps: false,
     indexes: [
       {
@@ -36,7 +32,14 @@ export default class infod_tif_comentario extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_comentario" },
+          { name: "id_filme_usu" },
+        ]
+      },
+      {
+        name: "id_filme",
+        using: "BTREE",
+        fields: [
+          { name: "id_filme" },
         ]
       },
       {
@@ -46,15 +49,8 @@ export default class infod_tif_comentario extends Model {
           { name: "id_usuario" },
         ]
       },
-      {
-        name: "id_anime",
-        using: "BTREE",
-        fields: [
-          { name: "id_anime" },
-        ]
-      },
     ]
   });
-  return infod_tif_comentario;
+  return infob_mw_filme_usuario;
   }
 }

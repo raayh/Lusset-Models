@@ -1,30 +1,30 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_ssc_adm extends Model {
+export default class infoa_sti_cupom extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_adm: {
+    id_cupom: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    ds_email: {
+    ds_nome_desconto: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_senha: {
-      type: DataTypes.STRING(50),
+    vl_cupom: {
+      type: DataTypes.DECIMAL(15,2),
       allowNull: true
     },
-    ds_codigo_adm: {
-      type: DataTypes.STRING(15),
+    bt_ativo: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_ssc_adm',
+    tableName: 'infoa_sti_cupom',
     timestamps: false,
     indexes: [
       {
@@ -32,11 +32,11 @@ export default class infod_ssc_adm extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_adm" },
+          { name: "id_cupom" },
         ]
       },
     ]
   });
-  return infod_ssc_adm;
+  return infoa_sti_cupom;
   }
 }

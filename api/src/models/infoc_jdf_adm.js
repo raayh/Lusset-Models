@@ -1,7 +1,7 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_ssc_adm extends Model {
+export default class infoc_jdf_adm extends Model {
   static init(sequelize, DataTypes) {
   super.init({
     id_adm: {
@@ -10,21 +10,33 @@ export default class infod_ssc_adm extends Model {
       allowNull: false,
       primaryKey: true
     },
+    nm_funncionario: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    ds_funcao: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
     ds_email: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_senha: {
-      type: DataTypes.STRING(50),
+    ds_senhaEmail: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_codigo_adm: {
-      type: DataTypes.STRING(15),
+    ds_cpf: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    nr_telefone: {
+      type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_ssc_adm',
+    tableName: 'infoc_jdf_adm',
     timestamps: false,
     indexes: [
       {
@@ -37,6 +49,6 @@ export default class infod_ssc_adm extends Model {
       },
     ]
   });
-  return infod_ssc_adm;
+  return infoc_jdf_adm;
   }
 }

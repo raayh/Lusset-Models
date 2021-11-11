@@ -1,10 +1,10 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_ssc_pedido extends Model {
+export default class infoc_nws_tb_venda_item extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_pedido: {
+    id_venda_item: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -14,41 +14,25 @@ export default class infod_ssc_pedido extends Model {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infod_ssc_venda',
+        model: 'infoc_nws_tb_venda',
         key: 'id_venda'
       }
     },
-    id_item: {
+    ds_qrcode: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    id_calendario_item: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infod_ssc_item',
-        key: 'id_item'
+        model: 'infoc_nws_tb_calendario_item',
+        key: 'id_calendario_item'
       }
-    },
-    dt_pedido: {
-      type: DataTypes.DATE,
-      allowNull: true
-    },
-    ds_entregue: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true
-    },
-    ds_acaminho: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true
-    },
-    ds_preparando: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true
-    },
-    vl_pedido: {
-      type: DataTypes.DECIMAL(10,2),
-      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_ssc_pedido',
+    tableName: 'infoc_nws_tb_venda_item',
     timestamps: false,
     indexes: [
       {
@@ -56,14 +40,7 @@ export default class infod_ssc_pedido extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_pedido" },
-        ]
-      },
-      {
-        name: "id_item",
-        using: "BTREE",
-        fields: [
-          { name: "id_item" },
+          { name: "id_venda_item" },
         ]
       },
       {
@@ -73,8 +50,15 @@ export default class infod_ssc_pedido extends Model {
           { name: "id_venda" },
         ]
       },
+      {
+        name: "FK_calendario_item",
+        using: "BTREE",
+        fields: [
+          { name: "id_calendario_item" },
+        ]
+      },
     ]
   });
-  return infod_ssc_pedido;
+  return infoc_nws_tb_venda_item;
   }
 }

@@ -1,34 +1,42 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_comentario extends Model {
+export default class infoa_enl_reg_plano extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_comentario: {
+    id_reg_plano: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
+    id_plano: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'infoa_enl_plano',
+        key: 'id_plano'
+      }
+    },
     id_usuario: {
       type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'infoa_enl_usuario',
+        key: 'id_usuario'
+      }
+    },
+    dt_aquisicao: {
+      type: DataTypes.DATE,
       allowNull: false
     },
-    id_anime: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    ds_comentario: {
-      type: DataTypes.STRING(255),
-      allowNull: false
-    },
-    dt_comentario: {
+    dt_expiracao: {
       type: DataTypes.DATE,
       allowNull: false
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_comentario',
+    tableName: 'infoa_enl_reg_plano',
     timestamps: false,
     indexes: [
       {
@@ -36,7 +44,14 @@ export default class infod_tif_comentario extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_comentario" },
+          { name: "id_reg_plano" },
+        ]
+      },
+      {
+        name: "id_plano",
+        using: "BTREE",
+        fields: [
+          { name: "id_plano" },
         ]
       },
       {
@@ -46,15 +61,8 @@ export default class infod_tif_comentario extends Model {
           { name: "id_usuario" },
         ]
       },
-      {
-        name: "id_anime",
-        using: "BTREE",
-        fields: [
-          { name: "id_anime" },
-        ]
-      },
     ]
   });
-  return infod_tif_comentario;
+  return infoa_enl_reg_plano;
   }
 }

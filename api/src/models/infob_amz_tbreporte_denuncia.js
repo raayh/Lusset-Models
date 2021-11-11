@@ -1,10 +1,10 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_comentario extends Model {
+export default class infob_amz_tbreporte_denuncia extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_comentario: {
+    id_reporte_denuncia: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -12,23 +12,35 @@ export default class infod_tif_comentario extends Model {
     },
     id_usuario: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true,
+      references: {
+        model: 'infob_amz_tbusuario',
+        key: 'id_usuario'
+      }
     },
-    id_anime: {
+    id_denuncia: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true,
+      references: {
+        model: 'infob_amz_tbdenuncia',
+        key: 'id_denuncia'
+      }
     },
-    ds_comentario: {
-      type: DataTypes.STRING(255),
-      allowNull: false
-    },
-    dt_comentario: {
+    dt_reporte: {
       type: DataTypes.DATE,
-      allowNull: false
+      allowNull: true
+    },
+    ds_motivo_reporte: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    ds_confirmado: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_comentario',
+    tableName: 'infob_amz_tbreporte_denuncia',
     timestamps: false,
     indexes: [
       {
@@ -36,7 +48,7 @@ export default class infod_tif_comentario extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_comentario" },
+          { name: "id_reporte_denuncia" },
         ]
       },
       {
@@ -47,14 +59,14 @@ export default class infod_tif_comentario extends Model {
         ]
       },
       {
-        name: "id_anime",
+        name: "id_denuncia",
         using: "BTREE",
         fields: [
-          { name: "id_anime" },
+          { name: "id_denuncia" },
         ]
       },
     ]
   });
-  return infod_tif_comentario;
+  return infob_amz_tbreporte_denuncia;
   }
 }

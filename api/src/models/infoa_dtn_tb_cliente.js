@@ -1,46 +1,46 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_ssc_produto extends Model {
+export default class infoa_dtn_tb_cliente extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_produto: {
+    id_cliente: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_produto: {
-      type: DataTypes.STRING(50),
+    ds_email: {
+      type: DataTypes.STRING(100),
       allowNull: true
     },
-    nm_categoria: {
-      type: DataTypes.STRING(255),
+    ds_senha: {
+      type: DataTypes.STRING(20),
       allowNull: true
     },
-    ds_produto: {
-      type: DataTypes.STRING(500),
+    nm_cliente: {
+      type: DataTypes.STRING(200),
       allowNull: true
     },
-    ds_avaliacao: {
-      type: DataTypes.DECIMAL(10,0),
+    ds_cpf: {
+      type: DataTypes.STRING(20),
       allowNull: true
     },
-    qtd_disponivel_estoque: {
-      type: DataTypes.INTEGER,
+    ds_telefone: {
+      type: DataTypes.STRING(25),
       allowNull: true
     },
-    ds_imagem: {
-      type: DataTypes.STRING(255),
+    dt_nascimento: {
+      type: DataTypes.DATEONLY,
       allowNull: true
     },
-    vl_produto: {
-      type: DataTypes.DECIMAL(10,2),
-      allowNull: true
+    ds_codigo_rec: {
+      type: DataTypes.STRING(100),
+      allowNull: false
     }
   }, {
     sequelize,
-    tableName: 'infod_ssc_produto',
+    tableName: 'infoa_dtn_tb_cliente',
     timestamps: false,
     indexes: [
       {
@@ -48,11 +48,11 @@ export default class infod_ssc_produto extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_produto" },
+          { name: "id_cliente" },
         ]
       },
     ]
   });
-  return infod_ssc_produto;
+  return infoa_dtn_tb_cliente;
   }
 }

@@ -1,46 +1,42 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_ssc_produto extends Model {
+export default class infob_hdm_cadastro extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_produto: {
+    id_HDM_cadastro: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_produto: {
-      type: DataTypes.STRING(50),
+    nm_HDM_nome: {
+      type: DataTypes.STRING(100),
       allowNull: true
     },
-    nm_categoria: {
-      type: DataTypes.STRING(255),
+    nm_HDM_sobrenome: {
+      type: DataTypes.STRING(300),
       allowNull: true
     },
-    ds_produto: {
-      type: DataTypes.STRING(500),
+    dt_HDM_data_nascimento: {
+      type: DataTypes.DATEONLY,
       allowNull: true
     },
-    ds_avaliacao: {
+    nr_HDM_celular: {
       type: DataTypes.DECIMAL(10,0),
       allowNull: true
     },
-    qtd_disponivel_estoque: {
-      type: DataTypes.INTEGER,
+    nm_HDM_email: {
+      type: DataTypes.STRING(300),
       allowNull: true
     },
-    ds_imagem: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
-    vl_produto: {
-      type: DataTypes.DECIMAL(10,2),
+    nm_HDM_senha: {
+      type: DataTypes.STRING(50),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_ssc_produto',
+    tableName: 'infob_hdm_cadastro',
     timestamps: false,
     indexes: [
       {
@@ -48,11 +44,11 @@ export default class infod_ssc_produto extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_produto" },
+          { name: "id_HDM_cadastro" },
         ]
       },
     ]
   });
-  return infod_ssc_produto;
+  return infob_hdm_cadastro;
   }
 }
