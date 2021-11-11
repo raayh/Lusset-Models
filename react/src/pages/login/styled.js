@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Container = styled.div`
     margin: 0;
@@ -76,5 +76,4 @@ const Conteudo = styled.div`
     }
 `
 
-
-export {Container, Conteudo}
+export default {Container, Conteudo}
