@@ -48,94 +48,94 @@ export default function Marcas2 () {
                         </select>
                     </div>    
                             <div className="encaixotado">
-                                <div className="titulo-corpo"> Bonés/Chapéus </div>    
+                                    
                                 <div className="box">
                                     <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "../../assets/images/bone.branco.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/+tchuka.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Blusa Time Feminina </div>
+                                        <div className="preço-item"> R$109,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     
                                     <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "../../assets/images/bone.rosa.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Aba Curva Hocks Lettering <br/> Rosa Strap</div>
-                                        <div className="preço-item"> R$119,98 </div>
+                                        <div className="item"> <img src = "../../assets/images/paraguai.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Tênis Fila Classic Runner SI <br/> Masculino </div>
+                                        <div className="preço-item"> R$279,98 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     <div className="conteudo-corpo">    
-                                        <div className="item"> <img src = "../../assets/images/bucket.png" alt=""/> </div>                                                 
-                                        <div className="descricao-item"> Chapéu Bucket Verse Limited <br/> Dupla Face Gótico Preto</div>
-                                        <div className="preço-item"> R$69,89 </div>
+                                        <div className="item"> <img src = "../../assets/images/branquela.jpg" alt=""/> </div>                                                 
+                                        <div className="descricao-item"> Vestido Sport Club WI <br/> Feminino </div>
+                                        <div className="preço-item"> R$249,89 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>                                                          
                                 </div>
 
-                                <div className="titulo-corpo"> Meias </div>
+                                
                                 <div className="box">
                                     <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "../../assets/images/meia.fila.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/oreia.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Camiseta Molten Masculina  </div>
+                                        <div className="preço-item"> R$179,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "../../assets/images/meia.vermelha.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/passadinha.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Camisa Sport Club Wi <br/> Masculina </div>
+                                        <div className="preço-item"> R$129,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "../../assets/images/meia.verse.png" alt=""/> </div>                                                 
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/fazum4.jpg" alt=""/> </div>                                                 
+                                        <div className="descricao-item"> Calça Authentic Feminina </div>
+                                        <div className="preço-item"> R$199,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     
                                 </div>
 
-                                <div className="titulo-corpo"> Mascaras </div>
+                                
                                 <div className="box">
                                     
                                     <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "../../assets/images/precoceira.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/pezinho.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Short Sport Blend Feminino  </div>
+                                        <div className="preço-item"> R$139,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>    
                                     <div className="conteudo-corpo">    
-                                        <div className="item"> <img src = "../../assets/images/mascara.preta.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/tchukassa.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Casaco Comfortech Feminino  </div>
+                                        <div className="preço-item"> R$159,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>    
                                     <div className="conteudo-corpo">    
-                                        <div className="item"> <img src = "../../assets/images/macara.azul.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/chave.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Chinelo Fila Drifter Mesh <br/> Masculino </div>
+                                        <div className="preço-item"> R$129,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                 </div>    
 
-                                <div className="titulo-corpo"> Outros </div>
+                                
                                 <div className="box">
                                     
                                     <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "../../assets/images/pochete.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/bahia.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Tênis Fila Axilus 2 Energized Cc <br/> Masculino </div>
+                                        <div className="preço-item"> R$599,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>    
                                     <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "../../assets/images/luva.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/tchuka.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Casaco White Line Feminino  </div>
+                                        <div className="preço-item"> R$229,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "../../assets/images/anel.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>              
+                                        <div className="item"> <img src = "../../assets/images/jakob.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Blusão Fbox Hoodie || Unisex </div>
+                                        <div className="preço-item"> R$199,90 </div>              
                                         <div className="botão"> <button> Ver Mais </button> </div>                                                     
                                     </div>
                                 </div>

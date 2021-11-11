@@ -11,7 +11,7 @@ export default function Roupas () {
         <Container> 
             <Cabecalho> </Cabecalho>
 
-            <div className="superior">  Linhas Fila </div>
+            <div className="superior">  Roupas </div>
             <div className="linha"> <img src="/assets/images/Line 21.jpg" alt=""/> </div>
 
             <div className="conteudo-principal">
@@ -19,8 +19,8 @@ export default function Roupas () {
                     <div className="lateral">
                         <div className="item-L"> Categorias </div> <br/>
                         <div className="item-L"> Sobre </div>      <br/> 
-                        <div className="item-L"> Roupas </div>     <br/> 
-                        <div className="item-L-x"> Acessorios </div> <br/>
+                        <div className="item-L-x"> Roupas </div>     <br/> 
+                        <div className="item-L-X"> Acessorios </div> <br/>
                         <div className="item-L-X">  Bonés/Chapéus </div> <br/>
                         <div className="item-L-X"> - Meias </div> <br/>
                         <div className="item-L-X"> - Mascaras </div> <br/>
@@ -51,94 +51,94 @@ export default function Roupas () {
                         </select>
                     </div>    
                             <div className="encaixotado">
-                                <div className="titulo-corpo"> Bonés/Chapéus </div>    
+                                    
                                 <div className="box">
                                     <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "/assets/images/bone.branco.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/roxo.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Calça Jogger Tactel Corta Vento <br/> Snake Violeta Kace </div>
+                                        <div className="preço-item"> R$199,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     
                                     <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "/assets/images/bone.rosa.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Aba Curva Hocks Lettering <br/> Rosa Strap</div>
-                                        <div className="preço-item"> R$119,98 </div>
+                                        <div className="item"> <img src = "../../assets/images/michelangelo.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Camiseta Michelangelo Creazione <br/> di Adamo Preta Kace </div>
+                                        <div className="preço-item"> R$109,98 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     <div className="conteudo-corpo">    
-                                        <div className="item"> <img src = "/assets/images/bucket.png" alt=""/> </div>                                                 
-                                        <div className="descricao-item"> Chapéu Bucket Verse Limited <br/> Dupla Face Gótico Preto</div>
-                                        <div className="preço-item"> R$69,89 </div>
+                                        <div className="item"> <img src = "../../assets/images/shortkace.jpg" alt=""/> </div>                                                 
+                                        <div className="descricao-item"> Short Logo Preto Kace </div>
+                                        <div className="preço-item"> R$149,89 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>                                                          
                                 </div>
 
-                                <div className="titulo-corpo"> Meias </div>
+                                
                                 <div className="box">
                                     <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "/assets/images/meia.fila.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/calçafeia.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Calça Jogger Verce Cargo Warzone <br/> Bege </div>
+                                        <div className="preço-item"> R$199,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "/assets/images/meia.vermelha.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/starter.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Camisa Manga Curta Starter <br/> Logo St Amarelo </div>
+                                        <div className="preço-item"> R$99,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "/assets/images/meia.verse.png" alt=""/> </div>                                                 
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/kings.jpg" alt=""/> </div>                                                 
+                                        <div className="descricao-item"> Camiseta Masculina Street King <br/> Preta/Cinza </div>
+                                        <div className="preço-item"> R$44,95 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     
                                 </div>
 
-                                <div className="titulo-corpo"> Mascaras </div>
+                                
                                 <div className="box">
                                     
                                     <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "/assets/images/precoceira.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/carinhas.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Camiseta Mental Health Branca <br/> Kace  </div>
+                                        <div className="preço-item"> R$99,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>    
                                     <div className="conteudo-corpo">    
-                                        <div className="item"> <img src = "/assets/images/mascara.preta.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/marmore.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Camiseta Logo Marmorizada Tie <br/> Dye Preta Kace </div>
+                                        <div className="preço-item"> R$149,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>    
                                     <div className="conteudo-corpo">    
-                                        <div className="item"> <img src = "/assets/images/macara.azul.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/kacelistrada.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Camiseta com Listras Verticais <br/> Coloridas Masculinas Kace </div>
+                                        <div className="preço-item"> R$129,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                 </div>    
 
-                                <div className="titulo-corpo"> Outros </div>
+                                
                                 <div className="box">
                                     
                                     <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "/assets/images/pochete.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/negrao.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Camiseta Manga Curta Verse Wig <br/> Flew Rosa  </div>
+                                        <div className="preço-item"> R$69,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>    
                                     <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "/assets/images/luva.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/tiedye.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Camiseta Manga Curta Verse Tie <br/> Dye 1 </div>
+                                        <div className="preço-item"> R$99,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "/assets/images/anel.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>              
+                                        <div className="item"> <img src = "../../assets/images/adidas.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Camiseta Manga Curta Adidas <br/> 3 Listras Branca </div>
+                                        <div className="preço-item"> R$149,90 </div>              
                                         <div className="botão"> <button> Ver Mais </button> </div>                                                     
                                     </div>
                                 </div>

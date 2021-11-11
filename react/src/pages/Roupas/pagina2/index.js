@@ -8,16 +8,16 @@ export default function Roupas2 () {
         <Container> 
             <Cabecalho> </Cabecalho>
 
-            <div className="superior">  Linhas Fila </div>
-            <div className="linha"> <img src="/TCC-Lusett/assets/images/Line 21.jpg" alt=""/> </div>
+            <div className="superior">  Roupas Masculinas </div>
+            <div className="linha"> <img src="../../assets/images/Line 21.jpg" alt=""/> </div>
 
             <div className="conteudo-principal">
                 <div className="lateral-tudo">                           
                     <div className="lateral">
                         <div className="item-L"> Categorias </div> <br/>
                         <div className="item-L"> Sobre </div>      <br/> 
-                        <div className="item-L"> Roupas </div>     <br/> 
-                        <div className="item-L-x"> Acessorios </div> <br/>
+                        <div className="item-L-x"> Roupas </div>     <br/> 
+                        <div className="item-L-X"> Acessorios </div> <br/>
                         <div className="item-L-X">  Bonés/Chapéus </div> <br/>
                         <div className="item-L-X"> - Meias </div> <br/>
                         <div className="item-L-X"> - Mascaras </div> <br/>
@@ -48,93 +48,93 @@ export default function Roupas2 () {
                         </select>
                     </div>    
                             <div className="encaixotado">
-                                <div className="titulo-corpo"> Bonés/Chapéus </div>    
+                                <div className="titulo-corpo"> Camisetas </div>    
                                 <div className="box">
                                     <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "/TCC-Lusett/assets/images/bone.branco.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/laranja.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Camiseta Manga Curta Verse <br/> Collab Rap In Cena Preto  </div>
+                                        <div className="preço-item"> R$44,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     
                                     <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "/TCC-Lusett/assets/images/bone.rosa.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Aba Curva Hocks Lettering <br/> Rosa Strap</div>
-                                        <div className="preço-item"> R$119,98 </div>
+                                        <div className="item"> <img src = "../../assets/images/sidoka.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Camiseta Sidoka & Intactoz x <br/> Kace Preta </div>
+                                        <div className="preço-item"> R$89,98 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     <div className="conteudo-corpo">    
-                                        <div className="item"> <img src = "/TCC-Lusett/assets/images/bucket.png" alt=""/> </div>                                                 
-                                        <div className="descricao-item"> Chapéu Bucket Verse Limited <br/> Dupla Face Gótico Preto</div>
-                                        <div className="preço-item"> R$69,89 </div>
+                                        <div className="item"> <img src = "../../assets/images/camisavans.jpg" alt=""/> </div>                                                 
+                                        <div className="descricao-item"> Camiseta Vans Raglan  </div>
+                                        <div className="preço-item"> R$130,89 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>                                                          
                                 </div>
 
-                                <div className="titulo-corpo"> Meias </div>
+                                <div className="titulo-corpo"> Bermudas </div>
                                 <div className="box">
                                     <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "/TCC-Lusett/assets/images/meia.fila.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/atleta.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Short Logo Violeta Kace  </div>
+                                        <div className="preço-item"> R$149,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "/TCC-Lusett/assets/images/meia.vermelha.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/listrado.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Bermuda Moletom Fila Block  <br/> Marinho </div>
+                                        <div className="preço-item"> R$199,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "/TCC-Lusett/assets/images/meia.verse.png" alt=""/> </div>                                                 
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/short.jpg" alt=""/> </div>                                                 
+                                        <div className="descricao-item"> Bermuda Vans Reta Primary <br/> Volley li Preta   </div>
+                                        <div className="preço-item"> R$339,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     
                                 </div>
 
-                                <div className="titulo-corpo"> Mascaras </div>
+                                <div className="titulo-corpo"> Moleton </div>
                                 <div className="box">
                                     
                                     <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "/TCC-Lusett/assets/images/precoceira.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/blusavans.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Moletom Flanelado Fechado <br/> Vans Classic Preto </div>
+                                        <div className="preço-item"> R$259,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>    
                                     <div className="conteudo-corpo">    
-                                        <div className="item"> <img src = "/TCC-Lusett/assets/images/mascara.preta.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/blusafila.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Moleton Com Estampa de Logo e  <br/> Capuz </div>
+                                        <div className="preço-item"> R$931 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>    
                                     <div className="conteudo-corpo">    
-                                        <div className="item"> <img src = "/TCC-Lusett/assets/images/macara.azul.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/roxo.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Calça Jogger Tactel Corta Vento  <br/> Snake Violeta Kace  </div>
+                                        <div className="preço-item"> R$199,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                 </div>    
 
-                                <div className="titulo-corpo"> Outros </div>
+                                <div className="titulo-corpo"> Calças </div>
                                 <div className="box">
                                     
                                     <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "/TCC-Lusett/assets/images/pochete.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/skate.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Calça Sarja Vans Reta Authentic   <br/> Chino GI </div>
+                                        <div className="preço-item"> R$449,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>    
                                     <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "/TCC-Lusett/assets/images/luva.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
+                                        <div className="item"> <img src = "../../assets/images/milhao.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Calça Masculina Esportiva <br/> Ace Básica Com Vivo Contrastante <br/> azul Marinho </div>
+                                        <div className="preço-item"> R$59,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "/TCC-Lusett/assets/images/anel.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
+                                        <div className="item"> <img src = "../../assets/images/azul.jpg" alt=""/> </div>
+                                        <div className="descricao-item"> Calça Jogger Verde Jeans  <br/> Marmorizado Azul </div>
                                         <div className="preço-item"> R$119,90 </div>              
                                         <div className="botão"> <button> Ver Mais </button> </div>                                                     
                                     </div>
