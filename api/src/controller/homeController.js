@@ -1,41 +1,19 @@
-// import db from '../db.js'
-// import express from 'express'
-// import cors from 'cors'
+import { Router } from 'express'
 
-// const app = express();
-// app.use(cors()); 
-// app.use(express.json()); 
+import db from '../db.js'
 
-// app.get('/home', async (req, resp) => {
-//     try{ 
-    
-//     } catch (e) { 
-     
-//     }
-// })
+const app = Router();
 
-// app.post('/home', async (req, resp) => { 
-//     try { 
-      
-//     } catch (e) { 
-     
-//     }
-// })
+app.get('/:categoria', async (req, resp) => {
+    try{ 
+        const {categoria} = req.params;
+        const data = await db.infoc_tcc_produto.findOne({
+            where: {'ds_categoria': categoria}
+        });
+        resp.send(data);
+    } catch (e) { 
+        resp.send({ erro: e.toString() })
+    }
+})
 
-// app.put('/home/:id', async (req, resp) => {
-//  try { 
-
-
-//  } catch (e) { 
-   
-// })
-
-// app.delete('/home/:id', async (req, resp) => { 
-//     try { 
-        
-//     } catch (e) {
-    
-// })
-
-// app.listen(process.env.PORT,
-//            x => console.log(`Server up at port ${process.env.PORT}`))
+export default app;

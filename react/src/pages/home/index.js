@@ -1,5 +1,3 @@
-
-
 import { Container } from "./styled";
 import Cabecalho from "../../components/Cabecalho/index";
 import Rodape from "../../components/rodape/index";
@@ -9,78 +7,23 @@ import 'react-multi-carousel/lib/styles.css';
 
 import { useEffect, useState } from "react";
 import Produto from '../../components/box-home'
-import { CarouselConfig } from "./config";
+import { CarouselConfig } from "../detalhes roupa/carouselconfig";
 
 export default function Home() {
+  const loading = useRef(null);
+  
   const [produtos, setProdutos] = useState([])
-  function  listar(){
-      const r = [
-        {
-          id: 10002,
-          imagem: "https://http2.mlstatic.com/D_NQ_NP_716231-MLB41186477605_032020-W.jpg",
-          titulo: "teclado Gamer",
-          preco: "R$ 1.350,00",
-          desc: "Esse produto é muito legal e você deve comprá-lo porque sua vida será feliz!!!",
-          categoria: "tenis"
-        },
-        {
-          id: 10003,
-          imagem: "https://img.lojasrenner.com.br/item/581457294/zoom/1.jpg",
-          titulo: "Teclado Gamer",
-          preco: "R$ 680,00",
-          desc: "Esse produto é muito legal e você deve comprá-lo porque sua vida será feliz!!!",
-          categoria: "tenis" 
-        },
-        {
-          id: 10004,
-          imagem: "https://static.zattini.com.br/produtos/bone-new-era-aba-reta-fechado-mlb-ny-yankees-basic/06/F83-6107-006/F83-6107-006_zoom2.jpg?ts=1621878144",
-          titulo: "teclado Gamer",
-          preco: "R$ 12.584,00",
-          desc: "Esse produto é muito legal e você deve comprá-lo porque sua vida será feliz!!!",
-          categoria: "tenis"
-        },
-        {
-          id: 10005,
-          imagem: "/assets/images/tenis preto e verm dc.jpg",
-          titulo: "Poltrona Gamer",
-          preco: "R$ 1.350,00",
-          desc: "Esse produto é muito legal e você deve comprá-lo porque sua vida será feliz!!!",
-          categoria: "tenis"
-        },
-        {
-          id: 10006,
-          imagem: "Moletom com Capuz Preto Lettering Kace",
-          titulo: "Poltrona Gamer",
-          preco: "R$ 680,00",
-          desc: "Esse produto é muito legal e você deve comprá-lo porque sua vida será feliz!!!",
-          categoria: "bone" 
-        },
-        {
-          id: 10007,
-          imagem: "https://http2.mlstatic.com/D_NQ_NP_755842-MLB47599396706_092021-O.webp",
-          titulo: "Poltrona Gamer",
-          preco: "R$ 12.584,00",
-          desc: "Esse produto é muito legal e você deve comprá-lo porque sua vida será feliz!!!",
-          categoria: "acessorio"
-        },
-        {
-          id: 10008,
-          imagem: "/assets/images/tenis preto e verm dc.jpg",
-          titulo: "Poltrona Gamer",
-          preco: "R$ 1.350,00",
-          desc: "Esse produto é muito legal e você deve comprá-lo porque sua vida será feliz!!!",
-          categoria: "bone"
-        },
-      ]
 
-      setProdutos(r)
+  function  listar(){
+     async function listar(){
+       let r = await api.listar();
+       setProdutos(r);     
+      }
   }
 
   useEffect(() => {
    listar();
   });
-
-
   return (
     <Container>
       <Cabecalho />
@@ -98,7 +41,9 @@ export default function Home() {
         <div className="lancamentos">Lançamentos</div>
         <div className="prod-lanca">
         {produtos.map(i => 
-          <Produto produto={i} />//display={i.categoria !== '...'? 'none': 'visible'}
+          <Produto produto={i} display={i.categoria !== 'lancamento'
+                                                          ? 'none'
+                                                          : 'visible'} />
          )}
         </div>
 
@@ -106,7 +51,9 @@ export default function Home() {
         <div className="prod-acessorios">
           
          {produtos.map(i => 
-          <Produto produto={i} />//display={i.categoria !== 'acessorio'? 'none': 'visible'}
+          <Produto produto={i} display={i.categoria !== 'acessorio'
+                                                         ? 'none'
+                                                         : 'visible'} />
          )}
           
         </div>
@@ -114,7 +61,9 @@ export default function Home() {
         <div className="prod-tenis">
         <Carousel responsive={CarouselConfig} className="carousel-container">
         {produtos.map(i => 
-          <Produto produto={i} />
+          <Produto produto={i} display={i.categoria !== 'tenis'
+                                                         ? 'none'
+                                                         : 'visible'} />
          )}
          </Carousel>
         </div>

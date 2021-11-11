@@ -1,9 +1,23 @@
 import { Container } from "./styled";
-import Cabecalho from "../../../components/cabecalho/index";
+import Cabecalho from "../../../components/Cabecalho/index";
 import Rodape from "../../../components/rodape/index";
 import 'react-multi-carousel/lib/styles.css'
 
 export default function Roupas2 () {
+    const loading = useRef(null);
+  
+    const [roupasm, setRoupasm] = useState([])
+  
+       async function listar(){
+         let r = await api.listar();
+         setRoupasf(r);     
+        }
+
+        useEffect(() => {
+        listar();
+           });
+
+
     return(
         <Container> 
             <Cabecalho> </Cabecalho>
@@ -48,100 +62,27 @@ export default function Roupas2 () {
                         </select>
                     </div>    
                             <div className="encaixotado">
-                                <div className="titulo-corpo"> Camisetas </div>    
-                                <div className="box">
-                                    <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "../../assets/images/laranja.jpg" alt=""/> </div>
-                                        <div className="descricao-item"> Camiseta Manga Curta Verse <br/> Collab Rap In Cena Preto  </div>
-                                        <div className="preço-item"> R$44,90 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>
                                     
-                                    <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "../../assets/images/sidoka.jpg" alt=""/> </div>
-                                        <div className="descricao-item"> Camiseta Sidoka & Intactoz x <br/> Kace Preta </div>
-                                        <div className="preço-item"> R$89,98 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>
-                                    <div className="conteudo-corpo">    
-                                        <div className="item"> <img src = "../../assets/images/camisavans.jpg" alt=""/> </div>                                                 
-                                        <div className="descricao-item"> Camiseta Vans Raglan  </div>
-                                        <div className="preço-item"> R$130,89 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>                                                          
-                                </div>
+                                    <div className="box">
 
-                                <div className="titulo-corpo"> Bermudas </div>
-                                <div className="box">
-                                    <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "../../assets/images/atleta.jpg" alt=""/> </div>
-                                        <div className="descricao-item"> Short Logo Violeta Kace  </div>
-                                        <div className="preço-item"> R$149,90 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
+                                        {roupasm.map(i =>
+                                        
+                                        <div className="conteudo-corpo">
+                                            <Produto setRoupasf={i} display={i.genero !== 'masculino'
+                                                              ? 'none'
+                                                              : 'visible'} />
+                                            <div className="item"> {i.img_produto} </div>
+                                            <div className="descricao-item"> {i.nm_produto} </div>
+                                            <div className="preço-item"> {i.vl_preco_por} </div>
+                                            <div className="botão"> <button> Ver Mais </button> </div>
+                                        </div>
+    
+                                        )}
+                                        
                                     </div>
-                                    <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "../../assets/images/listrado.jpg" alt=""/> </div>
-                                        <div className="descricao-item"> Bermuda Moletom Fila Block  <br/> Marinho </div>
-                                        <div className="preço-item"> R$199,90 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>
-                                    <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "../../assets/images/short.jpg" alt=""/> </div>                                                 
-                                        <div className="descricao-item"> Bermuda Vans Reta Primary <br/> Volley li Preta   </div>
-                                        <div className="preço-item"> R$339,90 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>
-                                    
-                                </div>
-
-                                <div className="titulo-corpo"> Moleton </div>
-                                <div className="box">
-                                    
-                                    <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "../../assets/images/blusavans.jpg" alt=""/> </div>
-                                        <div className="descricao-item"> Moletom Flanelado Fechado <br/> Vans Classic Preto </div>
-                                        <div className="preço-item"> R$259,90 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>    
-                                    <div className="conteudo-corpo">    
-                                        <div className="item"> <img src = "../../assets/images/blusafila.jpg" alt=""/> </div>
-                                        <div className="descricao-item"> Moleton Com Estampa de Logo e  <br/> Capuz </div>
-                                        <div className="preço-item"> R$931 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>    
-                                    <div className="conteudo-corpo">    
-                                        <div className="item"> <img src = "../../assets/images/roxo.jpg" alt=""/> </div>
-                                        <div className="descricao-item"> Calça Jogger Tactel Corta Vento  <br/> Snake Violeta Kace  </div>
-                                        <div className="preço-item"> R$199,90 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>
-                                </div>    
-
-                                <div className="titulo-corpo"> Calças </div>
-                                <div className="box">
-                                    
-                                    <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "../../assets/images/skate.jpg" alt=""/> </div>
-                                        <div className="descricao-item"> Calça Sarja Vans Reta Authentic   <br/> Chino GI </div>
-                                        <div className="preço-item"> R$449,90 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>    
-                                    <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "../../assets/images/milhao.jpg" alt=""/> </div>
-                                        <div className="descricao-item"> Calça Masculina Esportiva <br/> Ace Básica Com Vivo Contrastante <br/> azul Marinho </div>
-                                        <div className="preço-item"> R$59,90 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>
-                                    <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "../../assets/images/azul.jpg" alt=""/> </div>
-                                        <div className="descricao-item"> Calça Jogger Verde Jeans  <br/> Marmorizado Azul </div>
-                                        <div className="preço-item"> R$119,90 </div>              
-                                        <div className="botão"> <button> Ver Mais </button> </div>                                                     
-                                    </div>
-                                </div>
-                            </div>
                         <div className="filtro"> </div>    
-                </div>               
+                </div>
+               </div>               
             </div>
             <Rodape> </Rodape>
         </Container>

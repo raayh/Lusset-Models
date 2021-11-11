@@ -37,13 +37,10 @@ export default class infod_omn_empresa extends Model {
     ds_porte: {
       type: DataTypes.STRING(255),
       allowNull: true
-<<<<<<< HEAD
-=======
     },
     ds_imagem: {
       type: DataTypes.STRING(255),
       allowNull: true
->>>>>>> 66847bae39143a122851360c75d687d28f81bbb0
     }
   }, {
     sequelize,
