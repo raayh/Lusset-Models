@@ -20,11 +20,15 @@ export default class infoc_tct_chat extends Model {
     },
     id_administrador: {
       type: DataTypes.INTEGER,
+<<<<<<< HEAD
       allowNull: true,
       references: {
         model: 'infoc_tct_administrador',
         key: 'id_administrador'
       }
+=======
+      allowNull: true
+>>>>>>> 66847bae39143a122851360c75d687d28f81bbb0
     },
     ds_mensagem: {
       type: DataTypes.STRING(150),
@@ -54,6 +58,7 @@ export default class infoc_tct_chat extends Model {
           { name: "id_cliente" },
         ]
       },
+<<<<<<< HEAD
       {
         name: "id_administrador",
         using: "BTREE",
@@ -61,6 +66,8 @@ export default class infoc_tct_chat extends Model {
           { name: "id_administrador" },
         ]
       },
+=======
+>>>>>>> 66847bae39143a122851360c75d687d28f81bbb0
     ]
   });
   return infoc_tct_chat;

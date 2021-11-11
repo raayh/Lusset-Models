@@ -24,6 +24,7 @@ export default class infod_tif_usuario extends Model {
     },
     ds_telefone: {
       type: DataTypes.STRING(19),
+<<<<<<< HEAD
       allowNull: false
     },
     dt_criacao: {
@@ -37,6 +38,17 @@ export default class infod_tif_usuario extends Model {
     ds_perfil: {
       type: DataTypes.STRING(255),
       allowNull: false
+=======
+      allowNull: true
+    },
+    dt_criacao: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    ds_perfil: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+>>>>>>> 66847bae39143a122851360c75d687d28f81bbb0
     }
   }, {
     sequelize,

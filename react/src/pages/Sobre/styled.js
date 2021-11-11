@@ -23,5 +23,45 @@ const Container = styled.div`
     padding-bottom: 50px;
   }
 
+  .titulo {
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 22px;
+  }
   
+  .caixaum {
+  }
+  
+  .caixadois {
+  }
+  
+  .caixatres {
+  }
+  
+  .texto {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 20px;
+  }
+  
+  .textodois {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 20px;
+  }
+  
+  .textotres {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 20px;
+  }
 `

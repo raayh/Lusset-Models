@@ -8,7 +8,7 @@ export default function Acessorios () {
         <Container> 
             <Cabecalho> </Cabecalho>
 
-            <div className="superior">  Linhas Fila </div>
+            <div className="superior">  Acessorios </div>
             <div className="linha"> <img src="../../assets/images/Line 21.jpg" alt=""/> </div>
 
             <div className="conteudo-principal">
@@ -74,13 +74,13 @@ export default function Acessorios () {
                                 <div className="titulo-corpo"> Meias </div>
                                 <div className="box">
                                     <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "../../assets/images/meia.fila.png" alt=""/> </div>
+                                        <div className="item"> <img src = "../../assets/images/meias.jpg" alt=""/> </div>
                                         <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
                                         <div className="preço-item"> R$119,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "../../assets/images/meia.vermelha.png" alt=""/> </div>
+                                        <div className="item"> <img src = "../../assets/images/meiasver.jpg" alt=""/> </div>
                                         <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
                                         <div className="preço-item"> R$119,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
@@ -121,19 +121,19 @@ export default function Acessorios () {
                                 <div className="box">
                                     
                                     <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "../../assets/images/pochete.png" alt=""/> </div>
+                                        <div className="item"> <img src = "../../assets/images/pochete.jpg" alt=""/> </div>
                                         <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
                                         <div className="preço-item"> R$119,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>    
                                     <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "../../assets/images/luva.png" alt=""/> </div>
+                                        <div className="item"> <img src = "../../assets/images/luva.jpg" alt=""/> </div>
                                         <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
                                         <div className="preço-item"> R$119,90 </div>
                                         <div className="botão"> <button> Ver Mais </button> </div>
                                     </div>
                                     <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "../../assets/images/anel.png" alt=""/> </div>
+                                        <div className="item"> <img src = "../../assets/images/anel.jpg" alt=""/> </div>
                                         <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
                                         <div className="preço-item"> R$119,90 </div>              
                                         <div className="botão"> <button> Ver Mais </button> </div>                                                     

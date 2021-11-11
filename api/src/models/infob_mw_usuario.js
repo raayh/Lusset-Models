@@ -53,6 +53,13 @@ export default class infob_mw_usuario extends Model {
     ds_codigo_rec: {
       type: DataTypes.INTEGER,
       allowNull: true
+<<<<<<< HEAD
+=======
+    },
+    ds_bio: {
+      type: DataTypes.STRING(500),
+      allowNull: true
+>>>>>>> 66847bae39143a122851360c75d687d28f81bbb0
     }
   }, {
     sequelize,

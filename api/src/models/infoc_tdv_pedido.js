@@ -33,6 +33,13 @@ export default class infoc_tdv_pedido extends Model {
     dt_pedido: {
       type: DataTypes.DATE,
       allowNull: true
+<<<<<<< HEAD
+=======
+    },
+    ds_situacao_ped: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+>>>>>>> 66847bae39143a122851360c75d687d28f81bbb0
     }
   }, {
     sequelize,

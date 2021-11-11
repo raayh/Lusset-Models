@@ -9,7 +9,7 @@ export default function Marcas () {
         <Cabecalho> </Cabecalho>
         
             <div className="superior">  Marcas </div>
-            <div className="linha"> <img src="../../assets/images/Line 21.jpg" alt="" /> </div> 
+            <div className="linha"> <img src="../../assets/images/Line 21.jpg" alt=""/> </div> 
 
             <div className="conteudo-marca">
               <div className="box"> 

@@ -11,7 +11,11 @@ export default class infoa_sti_produto extends Model {
       primaryKey: true
     },
     img_produto: {
+<<<<<<< HEAD
       type: DataTypes.STRING(255),
+=======
+      type: DataTypes.STRING(8000),
+>>>>>>> 66847bae39143a122851360c75d687d28f81bbb0
       allowNull: true
     },
     nm_produto: {
