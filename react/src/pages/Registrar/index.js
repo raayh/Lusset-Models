@@ -6,7 +6,7 @@ import 'react-multi-carousel/lib/styles.css'
 // import Api from '../../../service/api';
 // const api = new Api();
 
-export default function Roupas () {
+export default function Registrar () {
     return(
         <Container> 
             <Cabecalho> </Cabecalho>
