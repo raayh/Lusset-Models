@@ -9,6 +9,10 @@ import { useEffect, useState } from "react";
 import Produto from '../../components/box-home'
 import { CarouselConfig } from "../detalhes roupa/carouselconfig";
 
+
+import Api from '../../service/api';
+const api = new Api();
+
 export default function Home() {
   const loading = useRef(null);
   
@@ -16,7 +20,7 @@ export default function Home() {
 
   function  listar(){
      async function listar(){
-       let r = await api.listar();
+       let r = await api.listar2();
        setProdutos(r);     
       }
   }

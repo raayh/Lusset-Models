@@ -24,4 +24,24 @@ export default class Api {
         let r = await api.delete('/produtos/'+ id);
         return r.data;
     }
+
+    async listar2(categoria){
+        let r = await api.get('/home/' + categoria);
+        return data;
+    }
+
+    async listar3(genero){
+        let r = await api.get('/roupas/' + genero)
+        return data;
+    }
+
+    async listar4(acessorios){
+        let r = await api.get('/acessorios/' + acessorios)
+        return data;
+    }
+
+    async listar5(marcas){
+        let r = await api.get('/marcas/' + marcas)
+        return data;
+    }
 }

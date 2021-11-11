@@ -12,7 +12,7 @@ export default function Roupas () {
     const [roupasf, setRoupasf] = useState([])
   
        async function listar(){
-         let r = await api.listar();
+         let r = await api.listar3();
          setRoupasf(r);     
         }
 
@@ -68,7 +68,7 @@ export default function Roupas () {
                                 <div className="box">
                                    
                                     
-                                    {roupasm.map(i =>
+                                    {roupasf.map(i =>
                                     
                                     <div className="conteudo-corpo">
                                         <Produto roupasf={i} display={i.genero !== 'feminino'

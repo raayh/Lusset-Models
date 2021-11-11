@@ -1,7 +1,13 @@
 import { Container } from "./styled";
+
 import Cabecalho from "../../../components/Cabecalho/index";
+
 import Rodape from "../../../components/rodape/index";
+
 import 'react-multi-carousel/lib/styles.css'
+
+import Api from '../../../service/api';
+const api = new Api();
 
 export default function Roupas2 () {
     const loading = useRef(null);
@@ -9,8 +15,8 @@ export default function Roupas2 () {
     const [roupasm, setRoupasm] = useState([])
   
        async function listar(){
-         let r = await api.listar();
-         setRoupasf(r);     
+         let r = await api.listar3();
+         setRoupasm(r);     
         }
 
         useEffect(() => {

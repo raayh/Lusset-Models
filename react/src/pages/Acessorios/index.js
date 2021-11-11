@@ -1,9 +1,27 @@
 import { Container } from "./styled";
 import Cabecalho from "../../components/Cabecalho/index";
 import Rodape from "../../components/rodape/index";
+
 import 'react-multi-carousel/lib/styles.css'
 
+import { useState } from "react";
+
+import Api from '../../../service/api';
+const api = new Api();
+
 export default function Acessorios () {
+    const [acessorios, setAcessorios] = useState([])
+
+    async function listar() {
+        let r = await api.listar4();
+        setAcessorios(r);
+    }
+
+    useEffect(() => {
+        listar();
+    });
+
+
     return(
         <Container> 
             <Cabecalho> </Cabecalho>
@@ -51,93 +69,48 @@ export default function Acessorios () {
                                 <div className="titulo-corpo"> Bonés/Chapéus </div>    
                                 <div className="box">
                                     <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "../../assets/images/bone.branco.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>
-                                    
-                                    <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "../../assets/images/bone.rosa.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Aba Curva Hocks Lettering <br/> Rosa Strap</div>
-                                        <div className="preço-item"> R$119,98 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>
-                                    <div className="conteudo-corpo">    
-                                        <div className="item"> <img src = "../../assets/images/bucket.png" alt=""/> </div>                                                 
-                                        <div className="descricao-item"> Chapéu Bucket Verse Limited <br/> Dupla Face Gótico Preto</div>
-                                        <div className="preço-item"> R$69,89 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>                                                          
+                                        {acessorios.map(i => 
+                                        <Produto acessorios={i} display={i.categoria !== 'Bonés/Chapéus'
+                                                                                        ? 'none'
+                                                                                        : 'visible'} />
+                                        )}
+                                    </div>                                                       
                                 </div>
 
                                 <div className="titulo-corpo"> Meias </div>
                                 <div className="box">
-                                    <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "../../assets/images/meias.jpg" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>
-                                    <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "../../assets/images/meiasver.jpg" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>
-                                    <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "../../assets/images/meia.verse.png" alt=""/> </div>                                                 
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>
+                                <div className="conteudo-corpo"> 
+                                        {acessorios.map(i => 
+                                        <Produto acessorios={i} display={i.categoria !== 'Meias'
+                                                                                        ? 'none'
+                                                                                        : 'visible'} />
+                                        )}
+                                    </div>      
                                     
                                 </div>
 
                                 <div className="titulo-corpo"> Mascaras </div>
                                 <div className="box">
                                     
-                                    <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "../../assets/images/precoceira.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>    
-                                    <div className="conteudo-corpo">    
-                                        <div className="item"> <img src = "../../assets/images/mascara.preta.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>    
-                                    <div className="conteudo-corpo">    
-                                        <div className="item"> <img src = "../../assets/images/macara.azul.png" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>
+                                <div className="conteudo-corpo"> 
+                                        {acessorios.map(i => 
+                                        <Produto acessorios={i} display={i.categoria !== 'Mascaras'
+                                                                                        ? 'none'
+                                                                                        : 'visible'} />
+                                        )}
+                                    </div>      
                                 </div>    
 
                                 <div className="titulo-corpo"> Outros </div>
                                 <div className="box">
                                     
-                                    <div className="conteudo-corpo"> 
-                                        <div className="item"> <img src = "../../assets/images/pochete.jpg" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>    
-                                    <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "../../assets/images/luva.jpg" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>
-                                    <div className="conteudo-corpo">
-                                        <div className="item"> <img src = "../../assets/images/anel.jpg" alt=""/> </div>
-                                        <div className="descricao-item"> Boné Dad Hat Aba Curva Branco <br/> Kace Logo </div>
-                                        <div className="preço-item"> R$119,90 </div>              
-                                        <div className="botão"> <button> Ver Mais </button> </div>                                                     
-                                    </div>
+                                <div className="conteudo-corpo"> 
+                                        {acessorios.map(i => 
+                                        <Produto acessorios={i} display={i.categoria !== 'Outros'
+                                                                                        ? 'none'
+                                                                                        : 'visible'} />
+                                        )}
+                                    </div>      
                                 </div>
                             </div>
                         <div className="filtro"> </div>    
