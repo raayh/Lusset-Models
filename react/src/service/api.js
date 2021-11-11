@@ -27,21 +27,21 @@ export default class Api {
 
     async listar2(categoria){
         let r = await api.get('/home/' + categoria);
-        return data;
+        return r.data;
     }
 
     async listar3(genero){
         let r = await api.get('/roupas/' + genero)
-        return data;
+        return r.data;
     }
 
     async listar4(acessorios){
         let r = await api.get('/acessorios/' + acessorios)
-        return data;
+        return r.data;
     }
 
     async listar5(marcas){
         let r = await api.get('/marcas/' + marcas)
-        return data;
+        return r.data;
     }
 }

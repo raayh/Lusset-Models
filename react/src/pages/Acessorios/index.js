@@ -2,11 +2,12 @@ import { Container } from "./styled";
 import Cabecalho from "../../components/Cabecalho/index";
 import Rodape from "../../components/rodape/index";
 
+import Produto from '../../components/box-home'
+import { useEffect, useState } from "react";
+
 import 'react-multi-carousel/lib/styles.css'
 
-import { useState } from "react";
-
-import Api from '../../../service/api';
+import Api from '../../service/api';
 const api = new Api();
 
 export default function Acessorios () {

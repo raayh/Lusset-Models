@@ -1,13 +1,16 @@
 import { Container } from "./styled";
 import Cabecalho from "../../../components/Cabecalho/index";
 import Rodape from "../../../components/rodape/index";
-import 'react-multi-carousel/lib/styles.css'
+
+import { useEffect, useState } from "react";
+import Produto from '../../../components/box-home'
+// import { CarouselConfig } from "../../detalhes roupa/carouselconfig";
 
 import Api from '../../../service/api';
 const api = new Api();
 
 export default function Roupas () {
-    const loading = useRef(null);
+    // const loading = useRef(null);
   
     const [roupasf, setRoupasf] = useState([])
   

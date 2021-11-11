@@ -14,16 +14,14 @@ import Api from '../../service/api';
 const api = new Api();
 
 export default function Home() {
-  const loading = useRef(null);
+  // const loading = useRef(null);
   
   const [produtos, setProdutos] = useState([])
 
-  function  listar(){
      async function listar(){
        let r = await api.listar2();
        setProdutos(r);     
       }
-  }
 
   useEffect(() => {
    listar();
