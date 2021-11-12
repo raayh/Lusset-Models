@@ -1,5 +1,5 @@
 import Menu from '../../components/Menu/menu'
-import Cabecalho from '../../components/Cabecalho/Cabecalho-Client/index'
+import CabecalhoClient from '../../components/cabecalho/CabecalhoClient/index'
 import { Container, Conteudo } from './styled';
 
 import { Link } from 'react-router-dom'
@@ -12,7 +12,7 @@ export default function Cliente(){
         <Container>
             <Menu />
                 <Conteudo>
-                    <Cabecalho /> 
+                    <CabecalhoClient /> 
                     <div className="box"> 
 
                         <div className="box-esquerda">

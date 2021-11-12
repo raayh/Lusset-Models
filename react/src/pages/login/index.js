@@ -1,6 +1,6 @@
-import { Container } from "./styled";
-import Cabecalho from "../../../components/cabecalho/index";
-import Rodape from "../../../components/rodape/index";
+import { Container, Conteudo } from "./styled";
+import Cabecalho from "../../components/cabecalho/index";
+import Rodape from "../../components/rodape/index";
 import 'react-multi-carousel/lib/styles.css'
 
 // import Api from '../../../service/api';
@@ -10,7 +10,7 @@ export default function Login () {
     return(
     <Container> 
     <Cabecalho> </Cabecalho>   
-
+        <Conteudo> 
         <div class="base">
           <div class="cabecalho">
             <div class="titulo"><h1>LUSETT</h1></div>
@@ -41,7 +41,8 @@ export default function Login () {
             </form>
           </div>
         </div>
-      
+        </Conteudo>
+
       <Rodape> </Rodape>
       </Container>
       );

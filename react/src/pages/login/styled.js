@@ -76,4 +76,4 @@ const Conteudo = styled.div`
     }
 `
 
-export default {Container, Conteudo}
+export {Container, Conteudo}

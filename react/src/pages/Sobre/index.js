@@ -1,6 +1,6 @@
 import { Container } from "./styled";
-import Cabecalho from "../../../components/cabecalho/index";
-import Rodape from "../../../components/rodape/index";
+import Cabecalho from "../../components/cabecalho/index";
+import Rodape from "../../components/rodape/index";
 import 'react-multi-carousel/lib/styles.css'
 
 export default function Sobre (){

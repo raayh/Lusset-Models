@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 
 import Menu from '../../components/Menu/menu'
-import Cabecalho from '../../components/Cabecalho/Cabecalho-Client/index'
+import CabecalhoClient from '../../components/cabecalho/CabecalhoClient/index'
 
 import { Container, Conteudo } from './styled';
 import LoadingBar from 'react-top-loading-bar';
@@ -114,7 +114,7 @@ const loading = useRef(null);
         <Container>
             <Menu />
             <Conteudo>
-                <Cabecalho />
+                <CabecalhoClient />
                 <ToastContainer />
                 <LoadingBar color=" #E911C6" ref={loading} />
                 <div className="tabelas_input"> 

@@ -64,4 +64,6 @@ const Container = styled.div`
     font-size: 26px;
     line-height: 20px;
   }
-`
+  `
+
+  export {Container}

@@ -1,5 +1,5 @@
 import Menu from '../../../components/Menu/menu'
-import Cabecalho from '../../../components/Cabecalho/Cabecalho-Client/index'
+import CabecalhoClient from '../../../components/cabecalho/CabecalhoClient/index'
 
 import { Link } from 'react-router-dom'
 import { Container, Conteudo } from './styled'
@@ -9,7 +9,7 @@ export default function Pedido(){
         <Container>
             <Menu />
             <Conteudo>
-                <Cabecalho />
+                <CabecalhoClient />
                 <div className="container-box"> 
                     
                     <div className="titulo"> 
