@@ -27,26 +27,26 @@ export default function Routes() {
     return (
         <BrowserRouter>
             <Switch> 
-                <Route path="/" component={TelaRotas} />
-                <Route path="/login" exact={true} component={Login} />
-                <Routes path="/cadastrar" exact={true} component={Cadastrar} /> 
-                <Routes path="/home" exact={true} component={Home} /> 
-                <Routes path="/sobre" exact={true} component={Sobre} />
-                <Route path="/Cliente" exact={true} component={Cliente} />
-                <Route path="/pedido" exact={true} component={Pedido} />
-                <Route path="/carrinho" exact={true} component={Cart} />
-                <Route path="/carrinho_vazio" exact={true} component={CartVazio} />
-                <Route path="/admin" exact={true} component={Admin} />                
-                <Route path="/DetalhesProduto" exact={true}  component={DetalhesProduto} />
-                <Route path="/PagamentoInfo" exact={true}  component={PagamentoInfo} />
-                <Route path="/PagamentoFrete"  exact={true} component={PagamentoFrete} />
-                <Route path="/marcas"  exact={true} component={Marcas} />
-                <Route path="/marcas2" exact={true}  component={Marcas2} />
-                <Route path="/calcados" exact={true}  component={Calcados} />
-                <Route path="/calcados2" exact={true}  component={Calcados2} />
-                <Route path="/roupas" exact={true}  component={Roupas} />
-                <Route path="/roupas2" exact={true}  component={Roupas2} />
-                <Route path="/acessorios" exact={true}  component={Acessorios} />
+                <Route path="/"  exact={true} component={TelaRotas} />
+                <Route path="/login"  component={Login} />
+                <Routes path="/cadastrar"  component={Cadastrar} /> 
+                <Routes path="/home"  component={Home} /> 
+                <Routes path="/sobre"  component={Sobre} />
+                <Route path="/Cliente"  component={Cliente} />
+                <Route path="/pedido"  component={Pedido} />
+                <Route path="/carrinho"  component={Cart} />
+                <Route path="/carrinho_vazio"  component={CartVazio} />
+                <Route path="/admin"  component={Admin} />                
+                <Route path="/DetalhesProduto"   component={DetalhesProduto} />
+                <Route path="/PagamentoInfo"   component={PagamentoInfo} />
+                <Route path="/PagamentoFrete"   component={PagamentoFrete} />
+                <Route path="/marcas"   component={Marcas} />
+                <Route path="/marcas2"   component={Marcas2} />
+                <Route path="/calcados"   component={Calcados} />
+                <Route path="/calcados2"   component={Calcados2} />
+                <Route path="/roupas"   component={Roupas} />
+                <Route path="/roupas2"   component={Roupas2} />
+                <Route path="/acessorios"   component={Acessorios} />
 
             </Switch>
         </BrowserRouter>
