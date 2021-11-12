@@ -27,7 +27,7 @@ export default function Routes() {
     return (
         <BrowserRouter>
             <Switch> 
-                <Route path="/" exact={true} component={TelaRotas} />
+                <Route path="/" component={TelaRotas} />
                 <Route path="/login" exact={true} component={Login} />
                 <Routes path="/cadastrar" exact={true} component={Cadastrar} /> 
                 <Routes path="/home" exact={true} component={Home} /> 
