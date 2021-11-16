@@ -1,4 +1,6 @@
-import { Router } from 'express'
+
+
+import  Router  from 'express'
 
 import db from '../db.js'
 
@@ -9,6 +11,16 @@ app.get('/:categoria', async (req, resp) => {
         const {categoria} = req.params;
         const data = await db.infoc_tcc_produto.findOne({
             where: {'ds_categoria': categoria}
+        });
+        resp.send(data);
+    } catch (e) { 
+        resp.send({ erro: e.toString() })
+    }
+})
+
+app.get('/', async (req, resp) => {
+    try{ 
+        const data = await db.infoc_tcc_produto.findAll({
         });
         resp.send(data);
     } catch (e) { 

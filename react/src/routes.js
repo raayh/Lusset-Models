@@ -21,13 +21,13 @@ import Roupas from "./pages/Roupas/pagina1/index";
 import Roupas2 from "./pages/Roupas/pagina2/index";
 import Login from './pages/login/index';
 import Sobre from './pages/Sobre';
-import Cadastrar from './pages/Registrar';
+import Cadastrar from './pages/cadastrar/index';
 
 export default function Routes() {
     return (
         <BrowserRouter>
             <Switch> 
-                <Route path="/"  exact={true} component={TelaRotas} />
+                <Route path="/"  exact={true} component={Home} />
                 <Route path="/login"  component={Login} />
                 <Routes path="/cadastrar"  component={Cadastrar} /> 
                 <Routes path="/home"  component={Home} /> 

@@ -1,4 +1,6 @@
 import { Container } from "./styled";
+import {Link} from "react-router-dom";
+
 
 export default function Cabecalho() {
   return (
@@ -13,8 +15,8 @@ export default function Cabecalho() {
             <img src="/assets/images/boneco.jpg" alt="" />{" "}
           </div>
         </div>
-        {/* <div className="baixo">
-{ 
+        <div className="baixo">
+ 
         <Link to={{pathname: '/sobre'}}>  
           <div className="texto-cabecalho">Sobre</div>
         </Link>
@@ -33,7 +35,7 @@ export default function Cabecalho() {
         
         <Link to={{pathname: '/calcados'}}>  
           <div className="texto-cabecalho"> Calçados</div>
-        </Link> }
+        </Link> 
 
 
           <div className="icone-lupa">
@@ -42,7 +44,7 @@ export default function Cabecalho() {
           <div className="icone-carrinho">
             <img src="/assets/images/Carrinho (2).jpg" alt="" />{" "}
           </div>
-        </div> */}
+        </div> 
       </div>
     </Container>
   );

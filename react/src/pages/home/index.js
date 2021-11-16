@@ -17,15 +17,18 @@ export default function Home() {
   // const loading = useRef(null);
   
   const [produtos, setProdutos] = useState([])
-
-     async function listar(){
-       let r = await api.listar2();
-       setProdutos(r);     
-      }
-
+  console.log(produtos)
+ 
   useEffect(() => {
    listar();
   });
+  
+     async function listar(){
+       let r = await api.listar1();
+       setProdutos(r);     
+      }
+
+ 
   return (
     <Container>
       <Cabecalho />

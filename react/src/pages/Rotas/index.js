@@ -7,7 +7,7 @@ export default function TelaRotas(){
            <Link to="/Login"> <button> LOGIN </button> </Link>  
            <Link to="/cadastrar"> <button> CADASTRE-SE </button> </Link>  
            <Link to="/home"> <button> HOME </button> </Link>  
-           <Link to="Sobre"> <button> SOBRE </button> </Link>  
+           <Link to="/sobre"> <button> SOBRE </button> </Link>  
            <Link to="/roupas"> <button> ROUPAS </button> </Link>  
            <Link to="/roupas2"> <button> ROUPAS(PARTE 2)</button> </Link>  
            <Link to="/acessorios"> <button> ACESSÓRIOS </button> </Link>  

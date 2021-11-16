@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 
 import { Container } from './styled';
 
-function boxHome(props) {
+function Produto(props) {
   return(
     <Container style={{display: props.display}}> 
             <div className="img-produto">
-              <img src={props.produto.imagem} alt="" />{" "}
+              <img src={props.produto.img_produto} alt="" />{" "}
             </div>
             <div className="descricao">
-              {props.produto.desc}
+              {props.produto.nm_produto}
             </div>
-            <div className="valor">R${props.produto.preco}</div>
+            <div className="valor">R${props.produto.vl_preco_por}</div>
             <Link to={{pathname:"/DetalhesProduto", state: props.produto}}> 
               <button className="detalhes">Detalhes</button>
             </Link>
@@ -20,4 +20,4 @@ function boxHome(props) {
   )
 }
 
-export default boxHome;
+export default Produto;

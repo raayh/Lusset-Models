@@ -1,11 +1,11 @@
 import axios from 'axios'
 const api = axios.create({
-    baseURL: 'https://lusset.herokuapp.com:38296/'//'https://site-devstore.herokuapp.com'
+    baseURL: 'http://localhost:3030' //'https://lusset.herokuapp.com:38296/'//'https://site-devstore.herokuapp.com'
 })
 
 export default class Api {
     async listar(){
-        let r = await api.get('/produtos');
+        let r = await api.get('/produto');
         return r.data;
     }
 
@@ -25,8 +25,13 @@ export default class Api {
         return r.data;
     }
 
+    async listar1(){
+        let r = await api.get('/home');
+        return r.data;
+    }
+
     async listar2(categoria){
-        let r = await api.get('/home/' + categoria);
+        let r = await api.get(`/home/${categoria}`);
         return r.data;
     }
 

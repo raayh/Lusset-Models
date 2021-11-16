@@ -9,7 +9,7 @@ import 'react-multi-carousel/lib/styles.css'
 export default function Cadastrar(){
     return(
         <Container> 
-            <Cabecalho> </Cabecalho>
+            <Cabecalho/> 
             
         <div className="subtitulo">
           <h2>Em compras a partir de R$300,00</h2>
@@ -90,7 +90,7 @@ export default function Cadastrar(){
 
 
     </div>
-      <Rodape> </Rodape>
+      <Rodape/>
      </Container>
            
     );
