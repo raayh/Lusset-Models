@@ -58,7 +58,11 @@ const Container = styled.div`
     width: 100%;
   }
 
-  button {
+  .detalhes {
+    align-items: flex-end;
+    color: white;
+    font-size: 1em;
+
     background-color: #1282a2;
     padding: 0.5em;
     margin-top: 1em;
@@ -66,12 +70,6 @@ const Container = styled.div`
     width: 100%;
     align-items: flex-end;
     border-color: white;
-  }
-
-  .detalhes {
-    align-items: flex-end;
-    color: white;
-    font-size: 1em;
   }
 
   .descricao,

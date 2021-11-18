@@ -5,9 +5,9 @@ import { Container } from './styled';
 
 function Produto(props) {
   return(
-    <Container style={{display: props.display}}> 
+    <Container > 
             <div className="img-produto">
-              <img src={props.produto.img_produto} alt="" />{" "}
+              <img src={props.produto.img_produto} alt="" />
             </div>
             <div className="descricao">
               {props.produto.nm_produto}

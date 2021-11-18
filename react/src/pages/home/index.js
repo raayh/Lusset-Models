@@ -17,14 +17,13 @@ export default function Home() {
   // const loading = useRef(null);
   
   const [produtos, setProdutos] = useState([])
-  console.log(produtos)
  
   useEffect(() => {
    listar();
-  });
+  }, []);
   
      async function listar(){
-       let r = await api.listar1();
+       let r = await api.listar();
        setProdutos(r);     
       }
 
@@ -45,30 +44,30 @@ export default function Home() {
       <div className="produtos">
         <div className="lancamentos">Lançamentos</div>
         <div className="prod-lanca">
-        {produtos.map(i => 
-          <Produto produto={i} display={i.categoria !== 'lancamento'
-                                                          ? 'none'
-                                                          : 'visible'} />
+
+        <Carousel responsive={CarouselConfig} className="carousel-container" infinite={true}>
+        {produtos.filter(i => i.ds_categoria === 'Lançamento').map(i => 
+          <Produto produto={i} display="block" />
          )}
+         </Carousel>
         </div>
 
         <div className="acessorios">Acessórios</div>
         <div className="prod-acessorios">
-          
-         {produtos.map(i => 
-          <Produto produto={i} display={i.categoria !== 'acessorio'
-                                                         ? 'none'
-                                                         : 'visible'} />
+
+        <Carousel responsive={CarouselConfig} className="carousel-container" infinite={true}>
+        {produtos.filter(i => i.ds_categoria === 'Acessorios').map(i => 
+          <Produto produto={i} display="block" />
          )}
-          
+         </Carousel>
         </div>
+
         <div className="tenis">Tênis</div>
         <div className="prod-tenis">
-        <Carousel responsive={CarouselConfig} className="carousel-container">
-        {produtos.map(i => 
-          <Produto produto={i} display={i.categoria !== 'tenis'
-                                                         ? 'none'
-                                                         : 'visible'} />
+
+        <Carousel responsive={CarouselConfig} className="carousel-container" infinite={true}>
+        {produtos.filter(i => i.ds_categoria === 'Tênis').map(i => 
+          <Produto produto={i} display="block" />
          )}
          </Carousel>
         </div>

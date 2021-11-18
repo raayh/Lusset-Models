@@ -14,18 +14,20 @@ export default function Roupas () {
   
     const [roupasf, setRoupasf] = useState([])
   
+    
+    useEffect(() => {
+        listar();
+           }, [] );
+
        async function listar(){
-         let r = await api.listar3();
+         let r = await api.listar();
          setRoupasf(r);     
         }
 
-        useEffect(() => {
-        listar();
-           });
 
     return(
         <Container> 
-            <Cabecalho> </Cabecalho>
+            <Cabecalho/> 
 
             <div className="superior">  Roupas </div>
             <div className="linha"> <img src="/assets/images/Line 21.jpg" alt=""/> </div>
@@ -67,30 +69,21 @@ export default function Roupas () {
                         </select>
                     </div>    
                             <div className="encaixotado">
+                                
                                     
                                 <div className="box">
-                                   
+                                    <div className="conteudo-corpo"> 
                                     
                                     {roupasf.map(i =>
-                                    
-                                    <div className="conteudo-corpo">
-                                        <Produto roupasf={i} display={i.genero !== 'feminino'
-                                                          ? 'none'
-                                                          : 'visible'} />
-                                        <div className="item"> {i.img_produto} </div>
-                                        <div className="descricao-item"> {i.nm_produto} </div>
-                                        <div className="preço-item"> {i.vl_preco_por} </div>
-                                        <div className="botão"> <button> Ver Mais </button> </div>
-                                    </div>
-
+                                        <Produto produto={i} display="block" />
                                     )}
-                                    
+                                     </div>
                                 </div>
                             </div>
                         <div className="filtro"> </div>    
                 </div>               
             </div>
-            <Rodape> </Rodape>
+            <Rodape/> 
         </Container>
     );
 }
