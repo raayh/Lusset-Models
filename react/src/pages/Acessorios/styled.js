@@ -8,7 +8,6 @@ const Container = styled.div`
 
     background-color: #ffffff; 
     color: white;
-}
 
 .cabecalho{
     display: flex;
@@ -267,5 +266,4 @@ select {
   color: black;
 }
 `
-
 export {Container}

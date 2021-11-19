@@ -1,12 +1,11 @@
 import { Container } from "./styled";
-
-import Cabecalho from "../../../components/cabecalho/index";
-
+import Cabecalho from "../../../components/Cabecalho/index";
 import Rodape from "../../../components/rodape/index";
 
 import { useEffect, useState } from "react";
 import Produto from '../../../components/box-home'
 // import { CarouselConfig } from "../../detalhes roupa/carouselconfig";
+import { Link } from 'react-router-dom';
 
 import Api from '../../../service/api';
 const api = new Api();
@@ -17,7 +16,7 @@ export default function Roupas2 () {
     const [roupasm, setRoupasm] = useState([])
   
        async function listar(){
-         let r = await api.listar3();
+         let r = await api.listar();
          setRoupasm(r);     
         }
 
@@ -36,17 +35,20 @@ export default function Roupas2 () {
             <div className="conteudo-principal">
                 <div className="lateral-tudo">                           
                     <div className="lateral">
-                        <div className="item-L"> Categorias </div> <br/>
+                    <div className="item-L"> Categorias </div> <br/>
                         <div className="item-L"> Sobre </div>      <br/> 
                         <div className="item-L-x"> Roupas </div>     <br/> 
-                        <div className="item-L-X"> Acessorios </div> <br/>
-                        <div className="item-L-X">  Bonés/Chapéus </div> <br/>
-                        <div className="item-L-X"> - Meias </div> <br/>
-                        <div className="item-L-X"> - Mascaras </div> <br/>
-                        <div className="item-L-X"> - Outros </div> <br/>
-                        <div className="item-L-X"> - Marcas </div> <br/>
-                        <div className="item-L-X"> - Calçados </div> <br/>
+                        <Link to={{pathname:"/roupas2"}}>   
+                        <div className="item-L-X"> Roupas Masculinas </div> <br/>
+                        </Link>
+                        <Link to={{pathname:"/roupas"}}> 
+                        <div className="item-L-X"> Roupas Femininas </div> <br/>
+                        </Link>
+                        <div className="item-L"> Acessorios </div> <br/>
+                        <div className="item-L"> Marcas </div> <br/>
+                        <div className="item-L"> Calçados </div> <br/>
                     </div>
+
                     <div className="lateral-baixo">    
                         <div className="item-L-Baixo"> + Cores </div> <br/>
                         <div className="item-L-Baixo"> + Tamanho </div> <br/>
@@ -73,19 +75,16 @@ export default function Roupas2 () {
                                     
                                     <div className="box">
 
-                                        {roupasm.map(i =>
                                         
                                         <div className="conteudo-corpo">
-                                            <Produto setRoupasf={i} display={i.genero !== 'masculino'
-                                                              ? 'none'
-                                                              : 'visible'} />
-                                            <div className="item"> {i.img_produto} </div>
-                                            <div className="descricao-item"> {i.nm_produto} </div>
-                                            <div className="preço-item"> {i.vl_preco_por} </div>
-                                            <div className="botão"> <button> Ver Mais </button> </div>
+                                             
+                                                {roupasm.filter(i => i.ds_genero === 'Masculino').map(i =>
+                                                    <Produto produto={i} display="block" />
+                                                )}
+ 
                                         </div>
     
-                                        )}
+                                       
                                         
                                     </div>
                         <div className="filtro"> </div>    

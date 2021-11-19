@@ -1,5 +1,5 @@
 import { Container } from "./styled";
-import Cabecalho from "../../../components/cabecalho/index";
+import Cabecalho from "../../../components/Cabecalho/index";
 import Rodape from "../../../components/rodape/index";
 
 import { useEffect, useState } from "react";
@@ -16,7 +16,7 @@ export default function Marcas2 () {
     const [marcas, setMarcas] = useState([])
   
        async function listar(){
-         let r = await api.listar5();
+         let r = await api.listar();
          setMarcas(r);     
         }
 
@@ -38,13 +38,13 @@ export default function Marcas2 () {
                         <div className="item-L"> Categorias </div> <br/>
                         <div className="item-L"> Sobre </div>      <br/> 
                         <div className="item-L"> Roupas </div>     <br/> 
-                        <div className="item-L-x"> Acessorios </div> <br/>
-                        <div className="item-L-X">  Bonés/Chapéus </div> <br/>
-                        <div className="item-L-X"> - Meias </div> <br/>
-                        <div className="item-L-X"> - Mascaras </div> <br/>
-                        <div className="item-L-X"> - Outros </div> <br/>
-                        <div className="item-L-X"> - Marcas </div> <br/>
-                        <div className="item-L-X"> - Calçados </div> <br/>
+                        <div className="item-L"> Acessorios </div> <br/>
+                        <div className="item-L-x" > Marcas </div> <br/>
+                        <div className="item-L-X"> Fila </div> <br/>
+                        <div className="item-L-X"> Monarch </div> <br/>
+                        <div className="item-L-X"> Verse </div> <br/>
+                        <div className="item-L-X"> KACE </div> <br/>
+                        <div className="item-L"> Calçados </div> <br/>
                     </div>
                     <div className="lateral-baixo">    
                         <div className="item-L-Baixo"> + Cores </div> <br/>
@@ -74,13 +74,10 @@ export default function Marcas2 () {
                                    {marcas.map(i =>
                                    
                                    <div className="conteudo-corpo">
-                                       <Produto roupasf={i} display={i.marcas !== 'fila'
-                                                         ? 'none'
-                                                         : 'visible'} />
-                                       <div className="item"> {i.img_produto} </div>
-                                       <div className="descricao-item"> {i.nm_produto} </div>
-                                       <div className="preço-item"> {i.vl_preco_por} </div>
-                                       <div className="botão"> <button> Ver Mais </button> </div>
+                                          
+                                          {marcas.filter(i => i.nm_marca === 'Fila').map(i =>
+                                            <Produto produto={i} display="block" />
+                                        )}
                                    </div>
 
                                    )}

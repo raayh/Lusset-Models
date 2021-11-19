@@ -1,6 +1,5 @@
 import { Container, Conteudo } from "./styled";
-import Cabecalho from "../../components/cabecalho/index";
-import Rodape from "../../components/rodape/index";
+
 import 'react-multi-carousel/lib/styles.css'
 
 // import Api from '../../../service/api';
@@ -8,8 +7,7 @@ import 'react-multi-carousel/lib/styles.css'
 
 export default function Login () {
     return(
-    <Container> 
-    <Cabecalho> </Cabecalho>   
+    <Container>    
         <Conteudo> 
         <div class="base">
           <div class="cabecalho">
@@ -42,8 +40,6 @@ export default function Login () {
           </div>
         </div>
         </Conteudo>
-
-      <Rodape> </Rodape>
       </Container>
       );
 }

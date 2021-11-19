@@ -1,11 +1,13 @@
 import { Container } from "./styled";
-import Cabecalho from "../../components/cabecalho/index";
+import Cabecalho from "../../components/Cabecalho/index";
 import Rodape from "../../components/rodape/index";
 
 import Produto from '../../components/box-home'
 import { useEffect, useState } from "react";
+import { CarouselConfig } from "../detalhes roupa/carouselconfig";
 
-import 'react-multi-carousel/lib/styles.css'
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 import Api from '../../service/api';
 const api = new Api();
@@ -14,7 +16,7 @@ export default function Acessorios () {
     const [acessorios, setAcessorios] = useState([])
 
     async function listar() {
-        let r = await api.listar4();
+        let r = await api.listar();
         setAcessorios(r);
     }
 
@@ -33,16 +35,12 @@ export default function Acessorios () {
             <div className="conteudo-principal">
                 <div className="lateral-tudo">                           
                     <div className="lateral">
-                        <div className="item-L"> Categorias </div> <br/>
+                    <div className="item-L"> Categorias </div> <br/>
                         <div className="item-L"> Sobre </div>      <br/> 
-                        <div className="item-L"> Roupas </div>     <br/> 
-                        <div className="item-L-x"> Acessorios </div> <br/>
-                        <div className="item-L-X">  Bonés/Chapéus </div> <br/>
-                        <div className="item-L-X"> - Meias </div> <br/>
-                        <div className="item-L-X"> - Mascaras </div> <br/>
-                        <div className="item-L-X"> - Outros </div> <br/>
-                        <div className="item-L-X"> - Marcas </div> <br/>
-                        <div className="item-L-X"> - Calçados </div> <br/>
+                        <div className="item-L"> Roupas </div>     <br/>
+                        <div className="item-L"> Acessorios </div>     <br/>
+                        <div className="item-L"> Marcas </div> <br/>
+                        <div className="item-L"> Calçados </div> <br/>
                     </div>
                     <div className="lateral-baixo">    
                         <div className="item-L-Baixo"> + Cores </div> <br/>
@@ -70,22 +68,24 @@ export default function Acessorios () {
                                 <div className="titulo-corpo"> Bonés/Chapéus </div>    
                                 <div className="box">
                                     <div className="conteudo-corpo"> 
-                                        {acessorios.map(i => 
-                                        <Produto acessorios={i} display={i.categoria !== 'Bonés/Chapéus'
-                                                                                        ? 'none'
-                                                                                        : 'visible'} />
+                                    
+                                    <Carousel responsive={CarouselConfig} className="carousel-container" infinite={true}>
+                                        {acessorios.filter(i => i.ds_categoria === 'Bonés/Chapéus').map(i => 
+                                         <Produto produto={i} display="block" />
                                         )}
+                                    </Carousel>
+
                                     </div>                                                       
                                 </div>
 
                                 <div className="titulo-corpo"> Meias </div>
                                 <div className="box">
                                 <div className="conteudo-corpo"> 
-                                        {acessorios.map(i => 
-                                        <Produto acessorios={i} display={i.categoria !== 'Meias'
-                                                                                        ? 'none'
-                                                                                        : 'visible'} />
+                                    <Carousel responsive={CarouselConfig} className="carousel-container" infinite={true}>
+                                        {acessorios.filter(i => i.ds_categoria === 'Meias').map(i => 
+                                         <Produto produto={i} display="block" />
                                         )}
+                                    </Carousel>
                                     </div>      
                                     
                                 </div>
@@ -94,11 +94,11 @@ export default function Acessorios () {
                                 <div className="box">
                                     
                                 <div className="conteudo-corpo"> 
-                                        {acessorios.map(i => 
-                                        <Produto acessorios={i} display={i.categoria !== 'Mascaras'
-                                                                                        ? 'none'
-                                                                                        : 'visible'} />
+                                <Carousel responsive={CarouselConfig} className="carousel-container" infinite={true}>
+                                        {acessorios.filter(i => i.ds_categoria === 'Mascaras').map(i => 
+                                         <Produto produto={i} display="block" />
                                         )}
+                                    </Carousel>
                                     </div>      
                                 </div>    
 
@@ -106,11 +106,11 @@ export default function Acessorios () {
                                 <div className="box">
                                     
                                 <div className="conteudo-corpo"> 
-                                        {acessorios.map(i => 
-                                        <Produto acessorios={i} display={i.categoria !== 'Outros'
-                                                                                        ? 'none'
-                                                                                        : 'visible'} />
+                                <Carousel responsive={CarouselConfig} className="carousel-container" infinite={true}>
+                                        {acessorios.filter(i => i.ds_categoria === 'Outros').map(i => 
+                                         <Produto produto={i} display="block" />
                                         )}
+                                    </Carousel>
                                     </div>      
                                 </div>
                             </div>

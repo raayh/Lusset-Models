@@ -1,5 +1,5 @@
 import { Container } from "./styled";
-import Cabecalho from "../../components/cabecalho/index";
+import Cabecalho from "../../components/Cabecalho/index";
 import Rodape from "../../components/rodape/index";
 
 import Carousel from 'react-multi-carousel';
@@ -45,21 +45,23 @@ export default function Home() {
         <div className="lancamentos">Lançamentos</div>
         <div className="prod-lanca">
 
-        <Carousel responsive={CarouselConfig} className="carousel-container" infinite={true}>
-        {produtos.filter(i => i.ds_categoria === 'Lançamento').map(i => 
-          <Produto produto={i} display="block" />
-         )}
-         </Carousel>
+            <Carousel responsive={CarouselConfig} className="carousel-container" infinite={true}>
+            {produtos.filter(i => i.ds_categoria === 'Lançamento').map(i => 
+              <Produto produto={i} display="block" />
+            )}
+            </Carousel>
+
         </div>
 
         <div className="acessorios">Acessórios</div>
         <div className="prod-acessorios">
 
-        <Carousel responsive={CarouselConfig} className="carousel-container" infinite={true}>
-        {produtos.filter(i => i.ds_categoria === 'Acessorios').map(i => 
-          <Produto produto={i} display="block" />
-         )}
-         </Carousel>
+            <Carousel responsive={CarouselConfig} className="carousel-container" infinite={true}>
+            {produtos.filter(i => i.ds_categoria === 'Acessorios').map(i => 
+              <Produto produto={i} display="block" />
+            )}
+            </Carousel>
+            
         </div>
 
         <div className="tenis">Tênis</div>

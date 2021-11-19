@@ -1,12 +1,13 @@
 import { Container } from "./styled";
-import Cabecalho from "../../../components/cabecalho/index";
+import Cabecalho from "../../../components/Cabecalho/index";
 import Rodape from "../../../components/rodape/index";
 import 'react-multi-carousel/lib/styles.css'
+import { Link } from 'react-router-dom';
 
 export default function Marcas () {
     return (
         <Container>
-        <Cabecalho> </Cabecalho>
+        <Cabecalho/> 
         
             <div className="superior">  Marcas </div>
             <div className="linha"> <img src="../../assets/images/Line 21.jpg" alt=""/> </div> 
@@ -24,7 +25,9 @@ export default function Marcas () {
                     <img src="../../assets/images/image 18.png" alt=""/>
                     <div className="dois">  
                         <div className="desc"> Linha Fila </div>
+                        <Link to={{pathname:"/marcas2"}}>   
                         <div className="ver-agora"> <button> Ver Agora </button> </div>
+                        </Link>
                     </div>  
                 </div>
             </div>
@@ -40,8 +43,9 @@ export default function Marcas () {
                     <img src="../../assets/images/image 20.png" alt=""/>
                     <div className="dois">
                         <div className="desc"> JOIAS MONARCH X VERSE </div>
+                        <Link to={{pathname:"/marcas2"}}>   
                         <div className="ver-agora"> <button> Ver Agora </button> </div>
-                    </div>    
+                        </Link>                    </div>    
                 </div>
             </div>
             <div className="box3"> 
@@ -56,8 +60,9 @@ export default function Marcas () {
                     <img src="../../assets/images/image 19.png" alt=""/>
                     <div className="dois">
                         <div className="desc"> LINHA VERSE </div>
+                        <Link to={{pathname:"/marcas2"}}>   
                         <div className="ver-agora"> <button> Ver Agora </button> </div>
-                    </div>  
+                        </Link>                    </div>  
                 </div>
             </div>
             <div className="box4"> 
@@ -72,7 +77,9 @@ export default function Marcas () {
                     <img src="../../assets/images/image 22.png" alt=""/>
                     <div className="dois">
                         <div className="desc"> LINHA KACE </div>
+                        <Link to={{pathname:"/marcas2"}}>   
                         <div className="ver-agora"> <button> Ver Agora </button> </div>
+                        </Link>                    
                     </div>  
                 </div>
             </div>
@@ -87,13 +94,14 @@ export default function Marcas () {
                     <img src="../../assets/images/image 21.png" alt=""/>
                     <div className="dois">
                         <div className="desc"> LINHA VANS </div>
+                        <Link to={{pathname:"/marcas2"}}>   
                         <div className="ver-agora"> <button> Ver Agora </button> </div>
-                    </div>  
+                        </Link>                    </div>  
                 </div>
             </div>
             </div>
             
-        <Rodape> </Rodape>
+        <Rodape/>
         </Container>
     );
 }

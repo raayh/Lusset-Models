@@ -80,6 +80,8 @@ const Container = styled.div`
 .item-L-X{
     color: black;
     padding-left: 10px;
+
+   /* width: 5em; */
 }
 
 .item-L-Baixo{
@@ -97,13 +99,12 @@ const Container = styled.div`
     width: 100%;
 }
 
-
+/* 
 
 .encaixotado{
     display: flex;
     flex-direction: column;
-
-}
+} */
 
 .box{
     display: flex;
@@ -113,6 +114,11 @@ const Container = styled.div`
 
         
     margin: 10px 10px 100px 10px;
+}
+
+.conteudo-corpo{
+    display: flex;
+    flex-direction: column;
 }
 
 .titulo-corpo{
@@ -126,10 +132,7 @@ const Container = styled.div`
 }
         */cima|direita|baixo|esquerda*/
 
-.conteudo-corpo{
-    display: flex;
-    flex-direction: column;
-}
+
 
 .img{
     border-style: bold;

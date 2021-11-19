@@ -1,10 +1,11 @@
 import { Container } from "./styled";
-import Cabecalho from "../../../components/cabecalho/index";
+import Cabecalho from "../../../components/Cabecalho/index";
 import Rodape from "../../../components/rodape/index";
 
 import { useEffect, useState } from "react";
 import Produto from '../../../components/box-home'
 // import { CarouselConfig } from "../../detalhes roupa/carouselconfig";
+import { Link } from 'react-router-dom';
 
 import Api from '../../../service/api';
 const api = new Api();
@@ -38,13 +39,17 @@ export default function Roupas () {
                         <div className="item-L"> Categorias </div> <br/>
                         <div className="item-L"> Sobre </div>      <br/> 
                         <div className="item-L-x"> Roupas </div>     <br/> 
-                        <div className="item-L-X"> Acessorios </div> <br/>
-                        <div className="item-L-X">  Bonés/Chapéus </div> <br/>
-                        <div className="item-L-X"> - Meias </div> <br/>
-                        <div className="item-L-X"> - Mascaras </div> <br/>
-                        <div className="item-L-X"> - Outros </div> <br/>
-                        <div className="item-L-X"> - Marcas </div> <br/>
-                        <div className="item-L-X"> - Calçados </div> <br/>
+                        <Link to={{pathname:"/roupas2"}}>   
+                        <div className="item-L-X"> Roupas Masculinas </div> <br/>
+                        </Link>
+                        <Link to={{pathname:"/roupas"}}> 
+                        <div className="item-L-X"> Roupas Femininas </div> <br/>
+                        </Link>
+                        <div className="item-L"> Acessorios </div> <br/>
+                        <div className="item-L"> Marcas </div> <br/>
+                        <div className="item-L"> Calçados </div> <br/>
+                        
+                        
                     </div>
                     <div className="lateral-baixo">    
                         <div className="item-L-Baixo"> + Cores </div> <br/>
@@ -73,12 +78,14 @@ export default function Roupas () {
                                     
                                 <div className="box">
                                     <div className="conteudo-corpo"> 
-                                    
-                                    {roupasf.map(i =>
-                                        <Produto produto={i} display="block" />
-                                    )}
+                                        
+                                        {roupasf.filter(i => i.ds_genero === 'Feminino').map(i =>
+                                            <Produto produto={i} display="block" />
+                                        )}
+
                                      </div>
                                 </div>
+
                             </div>
                         <div className="filtro"> </div>    
                 </div>               
