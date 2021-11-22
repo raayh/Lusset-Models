@@ -150,7 +150,7 @@ const Container = styled.div`
 
 .box{
     display: flex;
-    flex-direction: row;
+    flex-direction: wrap;
     
     justify-content: space-evenly;
 
@@ -171,7 +171,7 @@ const Container = styled.div`
 
 .conteudo-corpo{
     display: flex;
-    flex-direction: column;
+    flex-direction: wrap;
 }
 
 

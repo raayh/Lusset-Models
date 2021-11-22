@@ -150,12 +150,12 @@ const Container = styled.div`
 
 .box{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     
     justify-content: space-evenly;
 
         
-    margin: 10px 10px 100px 10px;
+    margin: 10px 10px 10px 10px;
 }
 
 .titulo-corpo{
@@ -169,11 +169,6 @@ const Container = styled.div`
 }
         */cima|direita|baixo|esquerda*/
 
-.conteudo-corpo{
-    display: flex;
-    flex-direction: column;
-}
-
 
 .img{
     border-style: bold;
@@ -182,6 +177,14 @@ const Container = styled.div`
 .descricao-item{
     color: #1282A2;
     
+}
+
+.conteudo-corpo {
+    flex-direction: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1em;
+    margin-top: 2em;
 }
 
 .preço-item{

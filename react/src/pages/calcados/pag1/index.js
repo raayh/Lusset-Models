@@ -69,16 +69,28 @@ export default function Calcados () {
                             <div className="encaixotado"> 
                                 <div className="box">
 
-                                        
-                                    <div className="conteudo-corpo">
-                                        
+                                    
+                                        <div className="conteudo-corpo">
                                             {calcadosm.filter(i => i.ds_categoria === 'Tênis').map(i =>
                                                 <Produto produto={i} display="block" />
                                             )}
-
-                                    </div>
-
-
+                                        </div>
+                                        <div className="conteudo-corpo">
+                                            {calcadosm.filter(i => i.ds_categoria === 'Tênis').map(i =>
+                                                <Produto produto={i} display="block" />
+                                            )}
+                                        </div>
+                                        <div className="conteudo-corpo">
+                                            {calcadosm.filter(i => i.ds_categoria === 'Tênis').map(i =>
+                                                <Produto produto={i} display="block" />
+                                            )}
+                                        </div>
+                                        <div className="conteudo-corpo">
+                                            {calcadosm.filter(i => i.ds_categoria === 'Tênis').map(i =>
+                                                <Produto produto={i} display="block" />
+                                            )}
+                                        </div>
+                                    
 
                                 </div>
                             </div>
