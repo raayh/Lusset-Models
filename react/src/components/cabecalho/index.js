@@ -8,11 +8,11 @@ export default function Cabecalho() {
       <div className="cabecalho">
         <div className="cima">
           <div className="icone-menu">
-            <img src="/assets/images/menu.jpg" alt="" />{" "}
+            <img src="/assets/images/MENU-ICONE.png" alt="" />{" "}
           </div>
           <div className="lusett">LUSSET</div>
           <div className="icone-usuario">
-            <img src="/assets/images/boneco.jpg" alt="" />{" "}
+            <img src="/assets/images/BONECO.png" alt="" />{" "}
           </div>
         </div>
         <div className="baixo">
@@ -39,10 +39,10 @@ export default function Cabecalho() {
 
 
           <div className="icone-lupa">
-            <img src="/assets/images/lupa.jpg" alt="" />{" "}
+            <img src="/assets/images/LUPA.png" alt="" />{" "}
           </div>
           <div className="icone-carrinho">
-            <img src="/assets/images/Carrinho (2).jpg" alt="" />{" "}
+            <img src="/assets/images/shopping-cart.png" alt="" />{" "}
           </div>
         </div> 
       </div>
