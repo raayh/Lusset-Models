@@ -21,7 +21,6 @@ const Container = styled.div`
     color: white;
  }
  
-
 .texto{
    display: flex;
    flex-direction: row;

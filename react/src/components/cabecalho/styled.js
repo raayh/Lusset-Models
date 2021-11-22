@@ -62,5 +62,21 @@ const Container = styled.div`
   .texto-cabecalho {
     font-size: 1.5em;
   }
+
+  a:link  {
+    text-decoration: none;
+    color: white;
+ }
+
+ a:hover {
+  color: white;
+}
+
+a:active {
+  color: white;
+}
+a:visited {
+  color: white;
+}
 `;
 export { Container };
