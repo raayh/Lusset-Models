@@ -1,6 +1,27 @@
 import styled from "styled-components";
 
 const Container = styled.div`
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 41.1em;
+    background-image: url("https://images5.alphacoders.com/805/805185.jpg");
+    background-size: 84em;
+    background-repeat: no-repeat;
+    color: white;
+
+
+  .cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+  }
+  .titulo {
+    margin-left: 2em;
+  }
+
 .subtitulo h2 {
     position: absolute;
     top: 8px;
@@ -21,11 +42,14 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: -1em;
+    width: 100%;
+    font-size: 0.9em;
   }
   label {
     display: block;
-    text-transform: capitalize;
-    font-size: 1.5rem;
+    font-size: 1.1em;
+
   }
   form {
     width: 100%;
@@ -51,12 +75,13 @@ const Container = styled.div`
   input,
   select {
     width: 100%;
-    height: 50px;
+    height: 35px;
     border-radius: 10px;
     padding: 10px;
     border: 0;
     outline: none;
-    font-size: 1rem;
+    font-size: 1em;
+    margin-top: 0.4em;
   }
   select,
   select option {
@@ -78,17 +103,23 @@ const Container = styled.div`
     display: inline;
   }
   .form-group .form-single.check input[type="checkbox"] {
-    width: 50px;
+    width: 30px;
+    margin-right: 1em;
   }
   .form-group:last-of-type .form-single {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .form-group:last-of-type .form-single input[type="button"] {
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    height: 50%;
     border-radius: 10px;
-    font-size: 1.3rem;
+    font-size: 1rem;
+    margin-left: 7em;
+    margin-top: 1.3em;
+    background-color: rgb(24, 105, 110);
+    color: white;
+    border: rgb(24, 75, 115);
   }
 
 `

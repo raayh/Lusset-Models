@@ -1,30 +1,15 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    cursor: default;
-    font-family: 'Montserrat', sans-serif;
-`
-
-const Conteudo = styled.div`
-    color: azure;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    
-    background-image: url ("https://cdn.discordapp.com/attachments/814972179422249013/892541208600125460/Rectangle_50.png");
-    background-attachment: scroll;
-    background-size: cover;
+    height: 41.1em;
+    background-image: url("https://images5.alphacoders.com/805/805185.jpg");
+    background-size: 84em;
     background-repeat: no-repeat;
-
-    .base{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-    }
-
+    color: white;
+    
     .cabecalho {
         display: flex;
         justify-content: space-between;
@@ -32,6 +17,19 @@ const Conteudo = styled.div`
         height: 10%;
     }
 
+    .titulo {
+        margin-left: 2em;
+    }
+
+    .bonequim img {
+        margin-bottom: 0.2em;
+        width: 3em;
+    }
+
+    .welcome {
+        margin-bottom: 2em;
+        font-size: 2em;
+    }
     .tela-login {
         display: flex;
         flex-direction: column;
@@ -39,6 +37,8 @@ const Conteudo = styled.div`
         justify-content: center;
         width: 100%;
         height: 100%;
+        margin-bottom: 4em;
+        margin-top: -3em;
     }
 
     .text-base1 {
@@ -70,10 +70,28 @@ const Conteudo = styled.div`
     }
 
     .form-input {
-        width: 200px;
+        width: 280px;
         height: 40px;
+        margin-bottom: 2em;
+        margin-top: 0.5em;
+    }
 
+    .botões button {
+        color: white;
+        font-size: 1em;
+    
+        background-color: rgb(24, 109, 115);
+        padding: 0.5em;
+        border-radius: 0.3em;
+        margin-top: 0.3em;
+        width: 35%;
+        border: rgb(24, 75, 115);
+    }
+
+    .criar {
+        font-size: 1.2em;
+        margin-top: 0.1em;
     }
 `
 
-export {Container, Conteudo}
+export {Container}
