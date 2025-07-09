@@ -9,11 +9,13 @@ Loja virtual desenvolvida como projeto de TCC, com o objetivo de simular um e-co
 * Carrinho de compras
 * Etapas de pagamento e entrega
 
-## 🔧 Tecnologias Utilizadas
+## 🔧 Tecnologias e Ferramentas Utilizadas
 
-* **Front-end:** React.js
-* **Back-end:** Integração com banco de dados 
-* **Outras ferramentas:** HTML, CSS, bibliotecas de rotas
+* React.js
+* MySQL
+* Node.js
+* Figma
+* VS Code, GitHub
 
 ## 🧪 Como Executar o Projeto (exemplo)
 
